@@ -50,7 +50,7 @@
                 </Label>
             <ImageView fitHeight="93.0" fitWidth="90.0" layoutX="79.0" layoutY="10.0">
                <image>
-                  <Image url="@../../../../../../../../../../College%20works/JAVA/assets/book-stack.png" />
+                  <Image url="@../../../../../../../../../../College works/JAVA/assets/book-stack.png" />
                </image>
             </ImageView>
             </children>
