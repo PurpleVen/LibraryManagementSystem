@@ -7,14 +7,14 @@ public class DatabaseConnector {
     public Connection databaseLink;
 
     public Connection getConnection() {
-        String databaseName = "librarymanagement_db";
-        String databaseUser = "root";
-        String databasePassword = "";
+        String databaseName = "purpleven";
+        String databaseUser = "purpleven";
+        String databasePassword = "DxWTYB7IuaiGe0BS";
 
-        String url = "jdbc:mysql://localhost/" + databaseName;
+        String url = "jdbc:mysql://localhost:25060/purpleven" + databaseName;
 
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            Class.forName("Testing");
             databaseLink = DriverManager.getConnection(url, databaseUser, databasePassword);
         }
         catch (Exception e) {
