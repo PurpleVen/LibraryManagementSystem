@@ -1,24 +1,5 @@
 package com.example.librarymanagementsystem;
 
-/*import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
-import javafx.stage.Stage;
-
-public class HelloController {
-    @FXML
-    private Label welcomeText;
-
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
-    }
-}
-*/
-
         import javafx.event.ActionEvent;
         import javafx.fxml.FXML;
         import javafx.scene.control.Button;
@@ -30,7 +11,7 @@ public class HelloController {
         import java.sql.ResultSet;
         import java.sql.Statement;
 
-public class HelloController {
+public class HelloController extends HelloApplication{
 
     @FXML
     private Button cancelButton;
@@ -88,3 +69,4 @@ public class HelloController {
 }
 
 //Exampleeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+

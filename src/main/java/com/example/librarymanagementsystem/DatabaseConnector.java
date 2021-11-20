@@ -14,7 +14,7 @@ public class DatabaseConnector {
         String url = "jdbc:mysql://localhost:25060/purpleven" + databaseName;
 
         try {
-            Class.forName("Testing");
+            Class.forName("com.mysql.jdbc.Connection");
             databaseLink = DriverManager.getConnection(url, databaseUser, databasePassword);
         }
         catch (Exception e) {
