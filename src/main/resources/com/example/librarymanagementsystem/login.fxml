@@ -48,9 +48,9 @@
                         <Font name="Malgun Gothic Bold" size="35.0" />
                     </font>
                 </Label>
-            <ImageView fitHeight="93.0" fitWidth="90.0" layoutX="79.0" layoutY="10.0">
+            <ImageView fitHeight="93.0" fitWidth="90.0" layoutX="79.0" layoutY="12.0">
                <image>
-                  <Image url="@../../../../../../../../../../College works/JAVA/assets/book-stack.png" />
+                  <Image url="@../../../../java/Assets/book-stack.png" />
                </image>
             </ImageView>
             </children>
@@ -64,14 +64,14 @@
                 <Hyperlink layoutX="23.0" layoutY="471.0" style="-fx-font-weight: bold;" text="\@tushar4303" textFill="WHITE" />
                 <Hyperlink layoutX="118.0" layoutY="471.0" style="-fx-font-weight: bold;" text="\@Om-jannu" textFill="WHITE" />
                 <Hyperlink layoutX="116.0" layoutY="447.0" style="-fx-font-weight: bold;" text="\@saanvinaik" textFill="#fcfcfc" />
-            <ImageView fitHeight="232.0" fitWidth="304.0" layoutX="28.0" layoutY="132.0">
+            <ImageView fitHeight="251.0" fitWidth="332.0" layoutX="14.0" layoutY="137.0">
                <image>
-                  <Image url="@../../../../../../../../../../College works/JAVA/assets/undraw_book_lover_mkck__1_-removebg-preview.png" />
+                  <Image url="@../../../../java/Assets/undraw_book_lover_mkck__1_-removebg-preview.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="31.0" fitWidth="112.0" layoutX="21.0" layoutY="409.0">
+            <ImageView fitHeight="31.0" fitWidth="107.0" layoutX="20.0" layoutY="410.0">
                <image>
-                  <Image url="@../../../../../../../../../../College works/JAVA/assets/github (2).png" />
+                  <Image url="@../../../../java/Assets/github (2).png" />
                </image>
             </ImageView>
             </children>
