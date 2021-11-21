@@ -33,13 +33,18 @@ import java.io.IOException;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
+        try{Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
         // Stage.initStyle(StageStyle.UNDECORATED);
         // FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
         //Scene scene = new Scene(fxmlLoader.load(), 700, 600);
+        Scene login = new Scene(root);
+        stage.setScene(login);
         stage.setTitle("Library Management!");
-        stage.setScene(new Scene(root, 700,600));
+        //stage.setScene(new Scene(root, 700,600));
         stage.show();
+    } catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     public static void main(String[] args) {
