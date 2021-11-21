@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="540.0" prefWidth="960.0" style="-fx-background-color: F2F8FF; -fx-background-radius: 1em;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagementsystem.SceneController">
+<AnchorPane prefHeight="540.0" prefWidth="960.0" style="-fx-background-color: F2F8FF; -fx-background-radius: 1em;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagementsystem.HelloController">
     <children>
         <AnchorPane prefHeight="600.0" prefWidth="271.0" style="-fx-background-color: #242428;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
@@ -59,7 +59,7 @@
                         <Font name="Arial Rounded MT Bold" size="20.0" />
                     </font>
                 </Label>
-                <Button layoutX="12.0" layoutY="386.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Manage" textFill="WHITE">
+                <Button layoutX="12.0" layoutY="386.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Add" textFill="WHITE">
                     <font>
                         <Font size="18.0" />
                     </font>
@@ -76,6 +76,14 @@
                   <Image url="@../../../../java/Assets/book-stack.png" />
                </image>
             </ImageView>
+            <Button layoutX="13.0" layoutY="426.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Manage" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
             </children>
         </AnchorPane>
         <Pane layoutX="507.0" layoutY="78.0" prefHeight="120.0" prefWidth="202.0" style="-fx-background-color: #3F3D56; -fx-background-radius: 1em;">
@@ -117,25 +125,6 @@
                 </Label>
             </children>
         </Pane>
-        <Pane layoutX="725.0" layoutY="226.0" prefHeight="286.0" prefWidth="202.0" style="-fx-background-color: #f4d8ff; -fx-background-radius: 1em;">
-            <children>
-                <Label layoutX="23.0" layoutY="8.0" prefHeight="17.0" prefWidth="161.0" text="Leaderboard" textFill="#2b2869">
-                    <font>
-                        <Font name="System Bold" size="26.0" />
-                    </font>
-                </Label>
-                <Label layoutX="53.0" layoutY="195.0" prefHeight="38.0" prefWidth="102.0" text="User@1" textFill="#2b2869">
-                    <font>
-                        <Font name="System Bold" size="23.0" />
-                    </font>
-                </Label>
-            <ImageView fitHeight="92.0" fitWidth="162.0" layoutX="24.0" layoutY="90.0">
-               <image>
-                  <Image url="@../../../../java/Assets/undraw_winners_ao2o-removebg-preview.png" />
-               </image>
-            </ImageView>
-            </children>
-        </Pane>
         <Label layoutX="291.0" layoutY="21.0" prefHeight="35.0" prefWidth="161.0" text="DASHBOARD">
             <font>
                 <Font name="System Bold" size="24.0" />
@@ -153,6 +142,17 @@
       <ImageView fitHeight="286.0" fitWidth="439.0" layoutX="286.0" layoutY="226.0">
          <image>
             <Image url="@../../../../java/Assets/undraw_book_reading_kx9s-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="Alert" layoutX="726.0" layoutY="226.0" mnemonicParsing="false" prefHeight="286.0" prefWidth="202.0" style="-fx-background-color: #f4d8ff; -fx-background-radius: 1em;" />
+      <Label alignment="CENTER" layoutX="745.0" layoutY="239.0" prefHeight="17.0" prefWidth="161.0" text="Updates" textFill="#2b2869">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="100.0" fitWidth="161.0" layoutX="745.0" layoutY="296.0">
+         <image>
+            <Image url="@../../../../java/Assets/alert-removebg-preview.png" />
          </image>
       </ImageView>
     </children>

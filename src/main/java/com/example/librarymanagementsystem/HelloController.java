@@ -1,5 +1,6 @@
 package com.example.librarymanagementsystem;
 
+        import javafx.application.Platform;
         import javafx.event.ActionEvent;
         import javafx.fxml.FXML;
         import javafx.scene.control.Button;
@@ -26,7 +27,7 @@ public class HelloController extends HelloApplication{
     private PasswordField Password;
 
     public void loginButtonOnAction(ActionEvent e){
-        // LoginMessage.setText("Invalid Login!");
+        LoginMessage.setText("Invalid Login!");
 
         if(Username.getText().isBlank() ==  false && Password.getText().isBlank() == false) {
            // LoginMessage.setText("Invalid Login!");
@@ -40,7 +41,8 @@ public class HelloController extends HelloApplication{
 
     public void cancelButtonOnAction(ActionEvent e){
         Stage stage = (Stage)cancelButton.getScene().getWindow();
-        stage.close();
+       stage.close();
+
     }
 
     public void ValidateLibManLogin(){
