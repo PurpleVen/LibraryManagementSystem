@@ -145,7 +145,7 @@
          </image>
       </ImageView>
       <Button fx:id="Alert" layoutX="726.0" layoutY="226.0" mnemonicParsing="false" prefHeight="286.0" prefWidth="202.0" style="-fx-background-color: #f4d8ff; -fx-background-radius: 1em;" />
-      <Label alignment="CENTER" layoutX="745.0" layoutY="239.0" prefHeight="17.0" prefWidth="161.0" text="Updates" textFill="#2b2869">
+      <Label alignment="CENTER" layoutX="745.0" layoutY="239.0" prefHeight="17.0" prefWidth="161.0" text="Due Date" textFill="#2b2869">
          <font>
             <Font name="System Bold" size="26.0" />
          </font>

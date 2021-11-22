@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.gluonhq.charm.glisten.control.Avatar?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -12,7 +11,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="540.0" prefWidth="960.0" style="-fx-background-color: F2F8FF; -fx-background-radius: 1em;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.LibMng.dashboard.admin.AdmindashboardApplication">
+<AnchorPane prefHeight="540.0" prefWidth="960.0" style="-fx-background-color: F2F8FF; -fx-background-radius: 1em;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagementsystem.HelloController">
    <children>
       <AnchorPane prefHeight="600.0" prefWidth="271.0" style="-fx-background-color: #242428;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -122,14 +121,8 @@
             </Button>
          </children>
       </AnchorPane>
-      <ImageView fitHeight="143.0" fitWidth="211.0" layoutX="509.0" layoutY="26.0">
-         <image>
-            <Image url="@../../../../../../../../Downloads/undraw_subscriptions_re_k7jj-removebg-preview.png" />
-         </image>
-      </ImageView>
       <Pane layoutX="799.0" layoutY="13.0" prefHeight="51.0" prefWidth="142.0" style="-fx-background-color: #F8F9FA; -fx-border-radius: 10em; -fx-border-color: black; -fx-background-radius: 10em;">
          <children>
-            <Avatar layoutX="22.0" layoutY="10.0" radius="16.0" />
             <Label alignment="CENTER" layoutX="60.0" layoutY="11.0" prefHeight="30.0" prefWidth="58.0" text="ADMIN" textFill="#0d0d0d">
                <font>
                   <Font name="System Bold" size="12.0" />
