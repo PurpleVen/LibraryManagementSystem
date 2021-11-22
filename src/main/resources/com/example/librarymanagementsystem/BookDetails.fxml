@@ -54,7 +54,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button layoutX="12.0" layoutY="303.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Manage" textFill="WHITE">
+            <Button layoutX="12.0" layoutY="303.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold; -fx-border-color: white;" text="Manage" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
@@ -80,7 +80,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button layoutX="14.0" layoutY="426.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold; -fx-border-color: white;" text="Manage" textFill="WHITE">
+            <Button layoutX="14.0" layoutY="426.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Manage" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
@@ -90,9 +90,18 @@
             </Button>
          </children>
       </AnchorPane>
+      <Pane layoutX="800.0" layoutY="14.0" prefHeight="51.0" prefWidth="142.0" style="-fx-background-color: #F8F9FA; -fx-border-radius: 10em; -fx-background-radius: 10em; -fx-border-color: black;">
+         <children>
+            <Label alignment="CENTER" layoutX="63.0" layoutY="11.0" prefHeight="30.0" prefWidth="58.0" text="ADMIN" textFill="#0d0d0d">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
       <HBox layoutX="299.0" layoutY="122.0" prefHeight="51.0" prefWidth="630.0" style="-fx-background-color: #F8F9FD;">
          <children>
-            <Label alignment="CENTER" prefHeight="51.0" prefWidth="175.0" text="Name">
+            <Label alignment="CENTER" prefHeight="98.0" prefWidth="56.0" text="ID">
                <font>
                   <Font size="18.0" />
                </font>
@@ -100,7 +109,7 @@
                   <Insets />
                </HBox.margin>
             </Label>
-            <Label alignment="CENTER" prefHeight="51.0" prefWidth="78.0" text=" ID">
+            <Label alignment="CENTER" prefHeight="51.0" prefWidth="218.0" text="Title">
                <font>
                   <Font size="18.0" />
                </font>
@@ -108,7 +117,7 @@
                   <Insets />
                </HBox.margin>
             </Label>
-            <Label alignment="CENTER" prefHeight="51.0" prefWidth="178.0" text="Email ID">
+            <Label alignment="CENTER" prefHeight="51.0" prefWidth="131.0" text="ISBN">
                <font>
                   <Font size="18.0" />
                </font>
@@ -116,7 +125,15 @@
                   <Insets />
                </HBox.margin>
             </Label>
-            <Label alignment="CENTER" prefHeight="51.0" prefWidth="210.0" text="Phone No">
+            <Label alignment="CENTER" prefHeight="51.0" prefWidth="174.0" text="Author">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <Label alignment="CENTER" prefHeight="51.0" prefWidth="79.0" text="Quantity">
                <font>
                   <Font size="18.0" />
                </font>
@@ -130,82 +147,102 @@
          <content>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="306.0" prefWidth="634.0">
                <children>
-                  <Label layoutX="56.0" layoutY="10.0" prefHeight="51.0" prefWidth="78.0" text="Vendra" textAlignment="RIGHT">
+                  <Label alignment="CENTER" layoutX="18.0" layoutY="23.0" text="01">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <Label layoutX="56.0" layoutY="79.0" text="Tushar">
+                  <Label layoutX="62.0" layoutY="10.0" prefHeight="51.0" prefWidth="187.0" text="Nancy Drew: The Curse" textAlignment="RIGHT">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <Label layoutX="57.0" layoutY="136.0" text="Saanvi">
+                  <Label alignment="CENTER" layoutX="18.0" layoutY="79.0" text="02">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <Label layoutX="64.0" layoutY="193.0" text="Om ">
+                  <Label alignment="CENTER" layoutX="18.0" layoutY="132.0" text="03">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <Label layoutX="204.0" layoutY="23.0" text="53">
+                  <Label alignment="CENTER" layoutX="18.0" layoutY="180.0" text="04">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <Label layoutX="204.0" layoutY="79.0" text="35">
+                  <Label layoutX="59.0" layoutY="78.0" text="Learn java in one minute">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <Label layoutX="204.0" layoutY="135.0" text="32">
+                  <Label layoutX="58.0" layoutY="132.0" text="Linux for Dummies">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <Label layoutX="203.0" layoutY="192.0" text="25">
+                  <Label layoutX="59.0" layoutY="180.0" text="Oxford Dictionary">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <Label layoutX="267.0" layoutY="10.0" prefHeight="51.0" prefWidth="167.0" text="ven9@gmail.com" textAlignment="RIGHT">
+                  <Label alignment="CENTER" layoutX="264.0" layoutY="18.0" prefHeight="36.0" prefWidth="115.0" text="9781534470767">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <Label layoutX="267.0" layoutY="66.0" prefHeight="51.0" prefWidth="167.0" text="tush27@gmail.com" textAlignment="RIGHT">
+                  <Label layoutX="266.0" layoutY="79.0" text="2165654845617">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <Label layoutX="267.0" layoutY="123.0" prefHeight="51.0" prefWidth="167.0" text="sanu7@gmail.com" textAlignment="RIGHT">
+                  <Label layoutX="266.0" layoutY="132.0" text="8126577630123">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <Label layoutX="267.0" layoutY="180.0" prefHeight="51.0" prefWidth="167.0" text="jannu3@gmail.com" textAlignment="RIGHT">
+                  <Label layoutX="270.0" layoutY="180.0" text="231564645313">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" layoutX="428.0" layoutY="10.0" prefHeight="51.0" prefWidth="167.0" text="1234567896" textAlignment="RIGHT">
+                  <Label layoutX="416.0" layoutY="18.0" prefHeight="36.0" prefWidth="105.0" text=" Micol Ostow">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" layoutX="428.0" layoutY="66.0" prefHeight="51.0" prefWidth="167.0" text="1234567898" textAlignment="RIGHT">
+                  <Label layoutX="418.0" layoutY="79.0" text="Samuel miller">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" layoutX="426.0" layoutY="120.0" prefHeight="51.0" prefWidth="167.0" text="1234567897" textAlignment="RIGHT">
+                  <Label layoutX="419.0" layoutY="132.0" text="Emmett Dulaney">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" layoutX="428.0" layoutY="180.0" prefHeight="51.0" prefWidth="167.0" text="1234567895" textAlignment="RIGHT">
+                  <Label layoutX="422.0" layoutY="180.0" text="Jannu Om">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="568.0" layoutY="23.0" text="53">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="568.0" layoutY="79.0" text="35">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="568.0" layoutY="132.0" text="32">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="568.0" layoutY="184.0" text="25">
                      <font>
                         <Font size="16.0" />
                      </font>
@@ -214,15 +251,6 @@
             </AnchorPane>
          </content>
       </ScrollPane>
-      <Pane layoutX="803.0" layoutY="22.0" prefHeight="51.0" prefWidth="142.0" style="-fx-background-color: #F8F9FA; -fx-border-radius: 10em; -fx-border-color: black; -fx-background-radius: 10em;">
-         <children>
-            <Label alignment="CENTER" layoutX="60.0" layoutY="11.0" prefHeight="30.0" prefWidth="58.0" text="ADMIN" textFill="#0d0d0d">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-            </Label>
-         </children>
-      </Pane>
    </children>
    <cursor>
       <Cursor fx:constant="DEFAULT" />

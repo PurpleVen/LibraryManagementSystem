@@ -8,9 +8,8 @@ package com.example.librarymanagementsystem;
         import javafx.stage.Stage;
         import javafx.scene.control.TextField;
         import javafx.scene.control.PasswordField;
-        import java.sql.Connection;
-        import java.sql.ResultSet;
-        import java.sql.Statement;
+
+        import java.sql.*;
 
 public class HelloController extends HelloApplication{
 
@@ -26,7 +25,7 @@ public class HelloController extends HelloApplication{
     @FXML
     private PasswordField Password;
 
-    public void loginButtonOnAction(ActionEvent e){
+    public void loginButtonOnAction(ActionEvent e) throws SQLException {
         LoginMessage.setText("Invalid Login!");
 
         if(Username.getText().isBlank() ==  false && Password.getText().isBlank() == false) {
@@ -45,9 +44,11 @@ public class HelloController extends HelloApplication{
 
     }
 
-    public void ValidateLibManLogin(){
+    public void ValidateLibManLogin() throws SQLException {
         DatabaseConnector connectNow = new DatabaseConnector();
-        Connection connectDB = connectNow.getConnection();
+       Connection connectDB = DriverManager.getConnection("jdbc:mysql://jblminiproject-do-user-10209104-0.b.db.ondigitalocean.com", "purpleven", "DxWTYB7IuaiGe0BS");
+        //Connection connectDB = connectNow.getConnection();
+        //Connection connectDB = DriverManager.getConnection("jblminiproject-do-user-10209104-0.b.db.ondigitalocean.com", "purpleven", "DxWTYB7IuaiGe0BS");
 
         String verifyLogin = "SELECT COUNT(1) FROM login WHERE Username = ' " +Username.getText()+ " ' AND Password =  ' " +Password.getText()+ " ' ";
 

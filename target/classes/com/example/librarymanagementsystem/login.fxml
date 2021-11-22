@@ -37,7 +37,7 @@
                     </font>
                 </Button>
                 <Label fx:id="LoginMessage" alignment="CENTER" layoutX="67.0" layoutY="147.0" onDragDetected="#ValidateLibManLogin" prefHeight="18.0" prefWidth="238.0" textAlignment="CENTER" textFill="#c41717" />
-                <PasswordField fx:id="databaseLink" layoutX="86.0" layoutY="291.0" onAction="#loginButtonOnAction" prefHeight="26.0" prefWidth="200.0" promptText="Password" style="-fx-background-radius: 7px; -fx-border-color: linear-gradient(to left bottom, #a617ff, #9731fc, #893ff8, #7c49f3, #7051ed, #5a62f3, #4471f6, #2f7df6, #0093fd, #00a8fe, #2cbafd, #5bcbfa); -fx-border-radius: 7px;" />
+                <PasswordField fx:id="Password" layoutX="86.0" layoutY="291.0" onAction="#loginButtonOnAction" prefHeight="26.0" prefWidth="200.0" promptText="Password" style="-fx-background-radius: 7px; -fx-border-color: linear-gradient(to left bottom, #a617ff, #9731fc, #893ff8, #7c49f3, #7051ed, #5a62f3, #4471f6, #2f7df6, #0093fd, #00a8fe, #2cbafd, #5bcbfa); -fx-border-radius: 7px;" />
                 <Label layoutX="181.0" layoutY="56.0" text="Library" textFill="#232222">
                     <font>
                         <Font name="Malgun Gothic Bold" size="35.0" />
@@ -70,7 +70,7 @@
                   <Image url="@../../../../java/Assets/undraw_book_lover_mkck__1_-removebg-preview.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="31.0" fitWidth="99.0" layoutX="25.0" layoutY="414.0">
+            <ImageView fitHeight="31.0" fitWidth="115.0" layoutX="24.0" layoutY="414.0">
                <image>
                   <Image url="@../../../../java/Assets/github (2).png" />
                </image>
