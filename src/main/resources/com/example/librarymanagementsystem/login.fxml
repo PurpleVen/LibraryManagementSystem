@@ -65,7 +65,7 @@
                 <Hyperlink layoutX="118.0" layoutY="471.0" style="-fx-font-weight: bold;" text="\@Om-jannu" textFill="WHITE" />
                 <Hyperlink layoutX="116.0" layoutY="447.0" style="-fx-font-weight: bold;" text="\@saanvinaik" textFill="#fcfcfc" />
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="95.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fitHeight="31.0" fitWidth="115.0" layoutX="24.0" layoutY="414.0">
+            <ImageView fitHeight="31.0" fitWidth="115.0" layoutX="24.0" layoutY="412.0">
                <image>
                   <Image url="@../../../Assets/github (2).png" />
                </image>

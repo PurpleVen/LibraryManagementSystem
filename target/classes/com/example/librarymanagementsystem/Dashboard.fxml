@@ -73,7 +73,7 @@
                     </cursor></Button>
             <ImageView fitHeight="92.0" fitWidth="92.0" layoutX="34.0" layoutY="20.0">
                <image>
-                  <Image url="@../../../../java/Assets/book-stack.png" />
+                  <Image url="@../../../Assets/book-stack.png" />
                </image>
             </ImageView>
             <Button layoutX="13.0" layoutY="426.0" mnemonicParsing="false" onAction="#switchToMemberDetails" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Manage" textFill="WHITE">
@@ -132,7 +132,7 @@
         </Label>
       <ImageView fitHeight="286.0" fitWidth="439.0" layoutX="286.0" layoutY="226.0">
          <image>
-            <Image url="@../../../../java/Assets/undraw_book_reading_kx9s-removebg-preview.png" />
+            <Image url="@../../../Assets/undraw_book_reading_kx9s-removebg-preview.png" />
          </image>
       </ImageView>
       <Button fx:id="DueDate" layoutX="726.0" layoutY="226.0" mnemonicParsing="false" onAction="#switchToDueDate" prefHeight="286.0" prefWidth="202.0" style="-fx-background-color: #f4d8ff; -fx-background-radius: 1em;" />
@@ -143,7 +143,7 @@
       </Label>
       <ImageView fitHeight="100.0" fitWidth="161.0" layoutX="745.0" layoutY="296.0" onDragDetected="#switchToDueDate">
          <image>
-            <Image url="@../../../../java/Assets/alert-removebg-preview.png" />
+            <Image url="@../../../Assets/alert-removebg-preview.png" />
          </image>
       </ImageView>
       <Button alignment="CENTER_RIGHT" layoutX="814.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchToDashboard" prefHeight="35.0" prefWidth="115.0" text="ADMIN">

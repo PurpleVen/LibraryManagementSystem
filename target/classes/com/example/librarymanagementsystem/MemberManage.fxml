@@ -127,7 +127,7 @@
       </AnchorPane>
       <ImageView layoutX="288.0" layoutY="27.0">
          <image>
-            <Image url="@../../../../java/Assets/icons8-go-back-24.png" />
+            <Image url="@../../../Assets/icons8-go-back-24.png" />
          </image>
       </ImageView>
       <Button alignment="CENTER_RIGHT" layoutX="833.0" layoutY="22.0" mnemonicParsing="false" onAction="#switchToDashboard" prefHeight="35.0" prefWidth="115.0" text="ADMIN">
