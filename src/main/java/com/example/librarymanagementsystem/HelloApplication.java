@@ -40,6 +40,8 @@ public class HelloApplication extends Application {
         Scene login = new Scene(root);
         stage.setScene(login);
         stage.setTitle("Library Management!");
+        stage.setResizable(false);
+        //PopUp.setResizable(false);
         //stage.setScene(new Scene(root, 700,600));
         stage.show();
     } catch (Exception e){
