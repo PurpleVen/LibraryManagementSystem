@@ -227,6 +227,11 @@
                </image>
             </ImageView>
             <Button layoutX="316.0" layoutY="24.0" mnemonicParsing="false" onAction="#switchToDashboard" text="Back" />
+            <ImageView fitHeight="100.0" fitWidth="161.0" layoutX="525.0" layoutY="40.0" onMouseClicked="#switchToDueDate">
+               <image>
+                  <Image url="@../../../Assets/alert-removebg-preview.png" />
+               </image>
+            </ImageView>
          </children>
          <cursor>
             <Cursor fx:constant="DEFAULT" />

@@ -142,6 +142,11 @@
          </font>
       </Button>
       <Button layoutX="326.0" layoutY="26.0" mnemonicParsing="false" onAction="#switchToMemberDetails" text="Back" />
+      <ImageView fitHeight="145.0" fitWidth="200.0" layoutX="512.0" layoutY="23.0">
+         <image>
+            <Image url="@../../../Assets/aghh-removebg-preview.png" />
+         </image>
+      </ImageView>
    </children>
    <cursor>
       <Cursor fx:constant="DEFAULT" />

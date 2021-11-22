@@ -126,6 +126,11 @@
             <Font size="16.0" />
          </font>
       </Button>
+      <ImageView fitHeight="164.0" fitWidth="200.0" layoutX="512.0">
+         <image>
+            <Image url="@../../../Assets/undraw_date_picker_gorr-removebg-preview.png" />
+         </image>
+      </ImageView>
    </children>
    <cursor>
       <Cursor fx:constant="DEFAULT" />

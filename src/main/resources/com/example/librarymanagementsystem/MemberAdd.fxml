@@ -125,6 +125,11 @@
             <Font size="16.0" />
          </font>
       </Button>
+      <ImageView fitHeight="130.0" fitWidth="200.0" layoutX="512.0" layoutY="23.0">
+         <image>
+            <Image url="@../../../Assets/undraw_Dev_focus_re_6iwt-removebg-preview.png" />
+         </image>
+      </ImageView>
    </children>
    <cursor>
       <Cursor fx:constant="DEFAULT" />

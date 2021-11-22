@@ -247,6 +247,11 @@
             <Font size="16.0" />
          </font>
       </Button>
+      <ImageView fitHeight="133.0" fitWidth="183.0" layoutX="523.0" layoutY="-3.0">
+         <image>
+            <Image url="@../../../Assets/aghh-removebg-preview.png" />
+         </image>
+      </ImageView>
    </children>
    <cursor>
       <Cursor fx:constant="DEFAULT" />

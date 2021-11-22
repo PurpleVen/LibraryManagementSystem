@@ -136,6 +136,11 @@
          </font>
       </Button>
       <Button layoutX="321.0" layoutY="27.0" mnemonicParsing="false" onAction="#switchToMemberDetails" text="Back" />
+      <ImageView fitHeight="146.0" fitWidth="214.0" layoutX="505.0" layoutY="22.0">
+         <image>
+            <Image url="@../../../Assets/undraw_subscriptions_re_k7jj-removebg-preview.png" />
+         </image>
+      </ImageView>
    </children>
    <cursor>
       <Cursor fx:constant="DEFAULT" />
