@@ -70,6 +70,30 @@ public class SceneController {
         stage.setScene(scene);
         stage.show();
     }
+
+    public void switchToMemberAdd(ActionEvent event) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("MemberAdd.fxml"));
+        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void switchToMemberDetails(ActionEvent event) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("MemberDetails.fxml"));
+        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void switchToMemberManage(ActionEvent event) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("MemberManage.fxml"));
+        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 }
 
 

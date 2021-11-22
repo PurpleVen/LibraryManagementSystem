@@ -59,7 +59,7 @@
                         <Font name="Arial Rounded MT Bold" size="20.0" />
                     </font>
                 </Label>
-                <Button layoutX="12.0" layoutY="386.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Add" textFill="WHITE">
+                <Button layoutX="12.0" layoutY="386.0" mnemonicParsing="false" onAction="#switchToMemberAdd" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Add" textFill="WHITE">
                     <font>
                         <Font size="18.0" />
                     </font>
@@ -76,7 +76,7 @@
                   <Image url="@../../../../java/Assets/book-stack.png" />
                </image>
             </ImageView>
-            <Button layoutX="13.0" layoutY="426.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Manage" textFill="WHITE">
+            <Button layoutX="13.0" layoutY="426.0" mnemonicParsing="false" onAction="#switchToMemberDetails" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Manage" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
@@ -114,7 +114,7 @@
             </children></Pane>
         <Pane layoutX="291.0" layoutY="78.0" onDragDetected="#switchToManageBook" prefHeight="120.0" prefWidth="202.0" style="-fx-background-color: #6C63FF; -fx-background-radius: 1em;">
             <children>
-                <Label layoutX="11.0" layoutY="14.0" prefHeight="17.0" prefWidth="161.0" text="Total Books" textFill="WHITE">
+                <Label layoutX="11.0" layoutY="14.0" onMouseClicked="#switchToBookDetails" prefHeight="17.0" prefWidth="161.0" text="Total Books" textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="24.0" />
                     </font></Label>
