@@ -29,7 +29,7 @@
             </Label>
             <ImageView fitHeight="92.0" fitWidth="92.0" layoutX="33.0" layoutY="17.0">
                <image>
-                  <Image url="@../../../../../../../../Downloads/book-stack.png" />
+                  <Image url="@../../../Assets/book-stack.png" />
                </image>
             </ImageView>
             <Separator layoutX="10.0" layoutY="167.0" prefHeight="3.0" prefWidth="254.0" />
@@ -43,7 +43,7 @@
                   <Font size="18.0" />
                </font>
                <cursor>
-                  <Cursor fx:constant="HAND" />
+                  <Cursor fx:constant="DEFAULT" />
                </cursor>
             </Button>
             <Button layoutX="13.0" layoutY="257.0" mnemonicParsing="false" onAction="#switchToAddBook" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Add" textFill="WHITE">
@@ -247,7 +247,6 @@
             <Font size="16.0" />
          </font>
       </Button>
-      <Hyperlink layoutX="396.0" layoutY="-71.0" text="Hyperlink" />
    </children>
    <cursor>
       <Cursor fx:constant="DEFAULT" />

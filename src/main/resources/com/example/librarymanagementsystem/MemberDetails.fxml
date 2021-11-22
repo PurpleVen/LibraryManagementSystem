@@ -29,7 +29,7 @@
             </Label>
             <ImageView fitHeight="92.0" fitWidth="92.0" layoutX="33.0" layoutY="17.0">
                <image>
-                  <Image url="@../../../../../../../../Downloads/book-stack.png" />
+                  <Image url="@../../../Assets/book-stack.png" />
                </image>
             </ImageView>
             <Separator layoutX="10.0" layoutY="167.0" prefHeight="3.0" prefWidth="254.0" />
