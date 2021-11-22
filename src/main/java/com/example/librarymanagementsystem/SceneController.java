@@ -1,15 +1,21 @@
 package com.example.librarymanagementsystem;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.control.Hyperlink;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
+import java.net.URI;
+import java.net.URISyntaxException;
+
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 
 public class SceneController {
 
@@ -97,6 +103,16 @@ public class SceneController {
         stage.setScene(scene);
         stage.show();
     }
+
+    /*@FXML
+    private Hyperlink hyperlink;
+
+    @FXML
+    void openLink(ActionEvent event) throws URISyntaxException, IOException{
+        System.out.println("Yayyy!");
+        Desktop.getDesktop().browse(new URI("https://github.com/PurpleVen"));
+    }*/
+
 }
 
 

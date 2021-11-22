@@ -60,7 +60,7 @@
                 <ColorAdjust />
             </effect>
             <children>
-                <Hyperlink layoutX="23.0" layoutY="447.0" style="-fx-font-weight: bold;" text="\@PurpleVen" textFill="#f7f7f7" />
+                <Hyperlink layoutX="136.0" layoutY="416.0" style="-fx-font-weight: bold;" text="https://github.com/PurpleVen" textFill="#f7f7f7" />
                 <Hyperlink layoutX="23.0" layoutY="471.0" style="-fx-font-weight: bold;" text="\@tushar4303" textFill="WHITE" />
                 <Hyperlink layoutX="118.0" layoutY="471.0" style="-fx-font-weight: bold;" text="\@Om-jannu" textFill="WHITE" />
                 <Hyperlink layoutX="116.0" layoutY="447.0" style="-fx-font-weight: bold;" text="\@saanvinaik" textFill="#fcfcfc" />
