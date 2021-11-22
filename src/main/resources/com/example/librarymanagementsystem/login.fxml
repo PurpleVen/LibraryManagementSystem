@@ -11,9 +11,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagementsystem.SceneController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: F2F8FF;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagementsystem.SceneController">
     <children>
-        <AnchorPane layoutX="14.0" layoutY="48.0" maxHeight="506.0" maxWidth="294.0" prefHeight="378.0" prefWidth="649.0" style="-fx-background-color: white; -fx-background-radius: 1em; -fx-border-color: black;" AnchorPane.bottomAnchor="46.0" AnchorPane.leftAnchor="331.0" AnchorPane.rightAnchor="37.0" AnchorPane.topAnchor="48.0">
+        <AnchorPane layoutX="14.0" layoutY="48.0" maxHeight="506.0" maxWidth="294.0" prefHeight="378.0" prefWidth="649.0" style="-fx-background-color: F2F8FF; -fx-background-radius: 1em; -fx-border-color: black;" AnchorPane.bottomAnchor="46.0" AnchorPane.leftAnchor="331.0" AnchorPane.rightAnchor="37.0" AnchorPane.topAnchor="48.0">
             <children>
                 <Label layoutX="85.0" layoutY="167.0" prefHeight="24.0" prefWidth="90.0" text="USERNAME:">
                     <font>

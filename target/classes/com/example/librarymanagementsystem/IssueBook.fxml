@@ -88,7 +88,7 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="312.0" layoutY="154.0" prefHeight="350.0" prefWidth="599.0" style="-fx-background-color: #6C63FF; -fx-background-radius: 1em; -fx-border-color: black; -fx-border-radius: 1em;">
+      <AnchorPane layoutX="312.0" layoutY="167.0" prefHeight="350.0" prefWidth="599.0" style="-fx-background-color: #6C63FF; -fx-background-radius: 1em; -fx-border-color: black; -fx-border-radius: 1em;">
          <children>
             <Label layoutX="25.0" layoutY="35.0" prefHeight="30.0" prefWidth="158.0" style="-fx-font-weight: bold;" text="Book ID :" textFill="WHITE">
                <font>
@@ -126,7 +126,7 @@
             <Font size="16.0" />
          </font>
       </Button>
-      <ImageView fitHeight="164.0" fitWidth="200.0" layoutX="512.0">
+      <ImageView fitHeight="164.0" fitWidth="200.0" layoutX="512.0" layoutY="13.0">
          <image>
             <Image url="@../../../Assets/undraw_date_picker_gorr-removebg-preview.png" />
          </image>

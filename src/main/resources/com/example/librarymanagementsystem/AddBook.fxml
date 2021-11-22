@@ -87,7 +87,7 @@
             </Button>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="317.0" layoutY="102.0" prefHeight="402.0" prefWidth="599.0" style="-fx-background-color: #6C63FF; -fx-background-radius: 1em; -fx-border-color: black; -fx-border-radius: 1em;">
+      <AnchorPane layoutX="317.0" layoutY="117.0" prefHeight="402.0" prefWidth="599.0" style="-fx-background-color: #6C63FF; -fx-background-radius: 1em; -fx-border-color: black; -fx-border-radius: 1em;">
          <children>
             <Label layoutX="25.0" layoutY="35.0" prefHeight="30.0" prefWidth="158.0" style="-fx-font-weight: bold;" text="Book Title : " textFill="WHITE">
                <font>
@@ -137,7 +137,7 @@
             <Font size="16.0" />
          </font>
       </Button>
-      <ImageView fitHeight="110.0" fitWidth="158.0" layoutX="538.0">
+      <ImageView fitHeight="110.0" fitWidth="158.0" layoutX="538.0" layoutY="12.0">
          <image>
             <Image url="@../../../Assets/undraw_Save_to_bookmarks_re_8ajf-removebg-preview.png" />
          </image>

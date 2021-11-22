@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="540.0" prefWidth="960.0" style="-fx-background-color: white; -fx-background-radius: 1em;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagementsystem.SceneController">
+<AnchorPane prefHeight="540.0" prefWidth="960.0" style="-fx-background-color: F2F8FF; -fx-background-radius: 1em;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagementsystem.SceneController">
    <children>
       <AnchorPane prefHeight="600.0" prefWidth="271.0" style="-fx-background-color: #242428;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -90,7 +90,7 @@
             </Button>
          </children>
       </AnchorPane>
-      <HBox layoutX="299.0" layoutY="122.0" prefHeight="51.0" prefWidth="630.0" style="-fx-background-color: #F8F9FD;">
+      <HBox layoutX="299.0" layoutY="149.0" prefHeight="51.0" prefWidth="630.0" style="-fx-background-color: #F8F9FD;">
          <children>
             <Label alignment="CENTER" prefHeight="98.0" prefWidth="56.0" text="ID">
                <font>
@@ -134,9 +134,9 @@
             </Label>
          </children>
       </HBox>
-      <ScrollPane hbarPolicy="NEVER" layoutX="299.0" layoutY="204.0" prefHeight="299.0" prefWidth="630.0" style="-fx-background-color: #F8F9FD;" vbarPolicy="ALWAYS">
+      <ScrollPane hbarPolicy="NEVER" layoutX="299.0" layoutY="215.0" prefHeight="299.0" prefWidth="630.0" style="-fx-background-color: #F8F9FD;" vbarPolicy="ALWAYS">
          <content>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="306.0" prefWidth="634.0">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="302.0" prefWidth="634.0">
                <children>
                   <Label alignment="CENTER" layoutX="18.0" layoutY="23.0" text="01">
                      <font>
@@ -247,7 +247,7 @@
             <Font size="16.0" />
          </font>
       </Button>
-      <ImageView fitHeight="133.0" fitWidth="183.0" layoutX="523.0" layoutY="-3.0">
+      <ImageView fitHeight="133.0" fitWidth="183.0" layoutX="523.0" layoutY="15.0">
          <image>
             <Image url="@../../../Assets/aghh-removebg-preview.png" />
          </image>
