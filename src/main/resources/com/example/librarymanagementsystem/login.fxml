@@ -50,7 +50,7 @@
                 </Label>
             <ImageView fitHeight="93.0" fitWidth="90.0" layoutX="79.0" layoutY="12.0">
                <image>
-                  <Image url="@../../../../java/Assets/book-stack.png" />
+                  <Image url="@../../../Assets/book-stack.png" />
                </image>
             </ImageView>
             </children>
@@ -65,14 +65,14 @@
                 <Hyperlink layoutX="118.0" layoutY="471.0" style="-fx-font-weight: bold;" text="\@Om-jannu" textFill="WHITE" />
                 <Hyperlink layoutX="116.0" layoutY="447.0" style="-fx-font-weight: bold;" text="\@saanvinaik" textFill="#fcfcfc" />
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="95.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fitHeight="234.0" fitWidth="305.0" layoutX="28.0" layoutY="146.0">
-               <image>
-                  <Image url="@../../../../java/Assets/undraw_book_lover_mkck__1_-removebg-preview.png" />
-               </image>
-            </ImageView>
             <ImageView fitHeight="31.0" fitWidth="115.0" layoutX="24.0" layoutY="414.0">
                <image>
-                  <Image url="@../../../../java/Assets/github (2).png" />
+                  <Image url="@../../../Assets/github (2).png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="226.0" fitWidth="296.0" layoutX="32.0" layoutY="150.0">
+               <image>
+                  <Image url="@../../../Assets/undraw_book_lover_mkck__1_-removebg-preview.png" />
                </image>
             </ImageView>
             </children>

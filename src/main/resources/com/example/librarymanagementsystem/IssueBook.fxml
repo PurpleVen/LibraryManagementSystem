@@ -83,7 +83,7 @@
             </Button>
             <ImageView fitHeight="92.0" fitWidth="92.0" layoutX="33.0" layoutY="20.0">
                <image>
-                  <Image url="@../../../../java/Assets/book-stack.png" />
+                  <Image url="@../../../Assets/book-stack.png" />
                </image>
             </ImageView>
          </children>

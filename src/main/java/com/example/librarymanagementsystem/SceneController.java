@@ -4,6 +4,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 
@@ -17,6 +19,7 @@ public class SceneController {
 
     public void switchTologin(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
+       // Image image = new Image("file: src/main/java/Assets/undraw_book_lover_mkck__1_-removebg-preview.png");
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

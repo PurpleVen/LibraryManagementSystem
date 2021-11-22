@@ -78,7 +78,7 @@
                   </Button>
                   <ImageView fitHeight="92.0" fitWidth="92.0" layoutX="34.0" layoutY="20.0">
                      <image>
-                        <Image url="@../../../../java/Assets/book-stack.png" />
+                        <Image url="@../../../Assets/book-stack.png" />
                      </image>
                   </ImageView>
                   <Button layoutX="13.0" layoutY="426.0" mnemonicParsing="false" onAction="#switchToMemberDetails" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Manage" textFill="WHITE">
@@ -223,7 +223,7 @@
             </ScrollPane>
             <ImageView accessibleRole="BUTTON" layoutX="292.0" layoutY="25.0" onDragDetected="#switchToDashboard">
                <image>
-                  <Image url="@../../../../java/Assets/icons8-go-back-24.png" />
+                  <Image url="@../../../Assets/icons8-go-back-24.png" />
                </image>
             </ImageView>
             <Button layoutX="316.0" layoutY="24.0" mnemonicParsing="false" onAction="#switchToDashboard" text="Back" />

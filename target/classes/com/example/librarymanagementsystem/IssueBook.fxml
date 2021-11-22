@@ -25,11 +25,6 @@
                   <Font name="Malgun Gothic Bold" size="35.0" />
                </font>
             </Label>
-            <ImageView fitHeight="92.0" fitWidth="92.0" layoutX="33.0" layoutY="17.0">
-               <image>
-                  <Image url="@../../../../../../../../Downloads/book-stack.png" />
-               </image>
-            </ImageView>
             <Separator layoutX="10.0" layoutY="167.0" prefHeight="3.0" prefWidth="254.0" />
             <Label layoutX="17.0" layoutY="180.0" prefHeight="21.0" prefWidth="115.0" text="Books" textFill="#fcfcfc">
                <font>
@@ -86,6 +81,11 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
+            <ImageView fitHeight="92.0" fitWidth="92.0" layoutX="33.0" layoutY="20.0">
+               <image>
+                  <Image url="@../../../Assets/book-stack.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
       <AnchorPane layoutX="312.0" layoutY="154.0" prefHeight="350.0" prefWidth="599.0" style="-fx-background-color: #6C63FF; -fx-background-radius: 1em; -fx-border-color: black; -fx-border-radius: 1em;">
