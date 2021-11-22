@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagementsystem.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagementsystem.SceneController">
     <children>
         <AnchorPane layoutX="14.0" layoutY="48.0" maxHeight="506.0" maxWidth="294.0" prefHeight="378.0" prefWidth="649.0" style="-fx-background-color: white; -fx-background-radius: 1em; -fx-border-color: black;" AnchorPane.bottomAnchor="46.0" AnchorPane.leftAnchor="331.0" AnchorPane.rightAnchor="37.0" AnchorPane.topAnchor="48.0">
             <children>
@@ -20,24 +20,24 @@
                         <Font size="14.0" />
                     </font>
                 </Label>
-                <TextField fx:id="Username" layoutX="86.0" layoutY="205.0" onAction="#loginButtonOnAction" prefHeight="26.0" prefWidth="200.0" promptText="Username" style="-fx-background-radius: 7px; -fx-border-color: linear-gradient(to left bottom, #a617ff, #9731fc, #893ff8, #7c49f3, #7051ed, #5a62f3, #4471f6, #2f7df6, #0093fd, #00a8fe, #2cbafd, #5bcbfa); -fx-border-radius: 7px;" />
+                <TextField fx:id="Username" layoutX="86.0" layoutY="205.0" prefHeight="26.0" prefWidth="200.0" promptText="Username" style="-fx-background-radius: 7px; -fx-border-color: linear-gradient(to left bottom, #a617ff, #9731fc, #893ff8, #7c49f3, #7051ed, #5a62f3, #4471f6, #2f7df6, #0093fd, #00a8fe, #2cbafd, #5bcbfa); -fx-border-radius: 7px;" />
                 <Label layoutX="86.0" layoutY="253.0" text="PASSWORD:">
                     <font>
                         <Font size="14.0" />
                     </font>
                 </Label>
-                <Button fx:id="loginButton" layoutX="155.0" layoutY="358.0" mnemonicParsing="false" onAction="#ValidateLibManLogin" prefHeight="31.0" prefWidth="77.0" style="-fx-background-radius: 1em; -fx-border-color: linear-gradient(to left bottom, #a617ff, #9731fc, #893ff8, #7c49f3, #7051ed, #5a62f3, #4471f6, #2f7df6, #0093fd, #00a8fe, #2cbafd, #5bcbfa); -fx-border-radius: 1em; -fx-background-color: White;" text="LOGIN" textFill="#666161">
+                <Button fx:id="loginButton" layoutX="155.0" layoutY="358.0" mnemonicParsing="false" onAction="#switchToDashboard" prefHeight="31.0" prefWidth="77.0" style="-fx-background-radius: 1em; -fx-border-color: linear-gradient(to left bottom, #a617ff, #9731fc, #893ff8, #7c49f3, #7051ed, #5a62f3, #4471f6, #2f7df6, #0093fd, #00a8fe, #2cbafd, #5bcbfa); -fx-border-radius: 1em; -fx-background-color: White;" text="LOGIN" textFill="#666161">
                     <font>
                         <Font name="System Bold" size="14.0" />
                     </font>
                 </Button>
-                <Button fx:id="cancelButton" layoutX="155.0" layoutY="405.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="31.0" prefWidth="77.0" style="-fx-background-radius: 1em; -fx-border-color: linear-gradient(to left bottom, #a617ff, #9731fc, #893ff8, #7c49f3, #7051ed, #5a62f3, #4471f6, #2f7df6, #0093fd, #00a8fe, #2cbafd, #5bcbfa); -fx-border-radius: 1em; -fx-background-color: white;" text="CANCEL" textFill="#665e5e">
+                <Button fx:id="cancelButton" layoutX="155.0" layoutY="405.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="77.0" style="-fx-background-radius: 1em; -fx-border-color: linear-gradient(to left bottom, #a617ff, #9731fc, #893ff8, #7c49f3, #7051ed, #5a62f3, #4471f6, #2f7df6, #0093fd, #00a8fe, #2cbafd, #5bcbfa); -fx-border-radius: 1em; -fx-background-color: white;" text="CANCEL" textFill="#665e5e">
                     <font>
                         <Font name="System Bold" size="14.0" />
                     </font>
                 </Button>
-                <Label fx:id="LoginMessage" alignment="CENTER" layoutX="67.0" layoutY="147.0" onDragDetected="#ValidateLibManLogin" prefHeight="18.0" prefWidth="238.0" textAlignment="CENTER" textFill="#c41717" />
-                <PasswordField fx:id="Password" layoutX="86.0" layoutY="291.0" onAction="#loginButtonOnAction" prefHeight="26.0" prefWidth="200.0" promptText="Password" style="-fx-background-radius: 7px; -fx-border-color: linear-gradient(to left bottom, #a617ff, #9731fc, #893ff8, #7c49f3, #7051ed, #5a62f3, #4471f6, #2f7df6, #0093fd, #00a8fe, #2cbafd, #5bcbfa); -fx-border-radius: 7px;" />
+                <Label fx:id="LoginMessage" alignment="CENTER" layoutX="67.0" layoutY="147.0" prefHeight="18.0" prefWidth="238.0" textAlignment="CENTER" textFill="#c41717" />
+                <PasswordField fx:id="Password" layoutX="86.0" layoutY="291.0" prefHeight="26.0" prefWidth="200.0" promptText="Password" style="-fx-background-radius: 7px; -fx-border-color: linear-gradient(to left bottom, #a617ff, #9731fc, #893ff8, #7c49f3, #7051ed, #5a62f3, #4471f6, #2f7df6, #0093fd, #00a8fe, #2cbafd, #5bcbfa); -fx-border-radius: 7px;" />
                 <Label layoutX="181.0" layoutY="56.0" text="Library" textFill="#232222">
                     <font>
                         <Font name="Malgun Gothic Bold" size="35.0" />

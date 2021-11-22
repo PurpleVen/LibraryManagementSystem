@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="540.0" prefWidth="960.0" style="-fx-background-color: F2F8FF; -fx-background-radius: 1em;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagementsystem.HelloController">
+<AnchorPane prefHeight="540.0" prefWidth="960.0" style="-fx-background-color: F2F8FF; -fx-background-radius: 1em;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagementsystem.SceneController">
     <children>
         <AnchorPane prefHeight="600.0" prefWidth="271.0" style="-fx-background-color: #242428;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
@@ -30,7 +30,7 @@
                         <Font name="Arial Rounded MT Bold" size="20.0" />
                     </font>
                 </Label>
-                <Button layoutX="15.0" layoutY="212.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Issue" textFill="WHITE">
+                <Button layoutX="15.0" layoutY="212.0" mnemonicParsing="false" onAction="#switchToIssueBook" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Issue" textFill="WHITE">
                     <font>
                         <Font size="18.0" />
                     </font>
@@ -38,7 +38,7 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </Button>
-                <Button layoutX="13.0" layoutY="257.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Add" textFill="WHITE">
+                <Button layoutX="13.0" layoutY="257.0" mnemonicParsing="false" onAction="#switchToAddBook" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Add" textFill="WHITE">
                     <font>
                         <Font size="18.0" />
                     </font>
@@ -46,7 +46,7 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </Button>
-                <Button layoutX="12.0" layoutY="303.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Manage" textFill="WHITE">
+                <Button layoutX="12.0" layoutY="303.0" mnemonicParsing="false" onAction="#switchToBookDetails" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Manage" textFill="WHITE">
                     <font>
                         <Font size="18.0" />
                     </font>
@@ -86,7 +86,7 @@
             </Button>
             </children>
         </AnchorPane>
-        <Pane layoutX="507.0" layoutY="78.0" prefHeight="120.0" prefWidth="202.0" style="-fx-background-color: #3F3D56; -fx-background-radius: 1em;">
+        <Pane layoutX="507.0" layoutY="78.0" onDragDetected="#switchToManageBook" prefHeight="120.0" prefWidth="202.0" style="-fx-background-color: #3F3D56; -fx-background-radius: 1em;">
             <children>
                 <Label layoutX="13.0" layoutY="14.0" prefHeight="35.0" prefWidth="180.0" text="Total Members" textFill="WHITE">
                     <font>
@@ -99,7 +99,7 @@
                     </font>
                 </Label>
             </children></Pane>
-        <Pane layoutX="726.0" layoutY="78.0" prefHeight="120.0" prefWidth="202.0" style="-fx-background-color: #544FA5; -fx-background-radius: 1em;">
+        <Pane layoutX="726.0" layoutY="78.0" onDragDetected="#switchToManageBook" prefHeight="120.0" prefWidth="202.0" style="-fx-background-color: #544FA5; -fx-background-radius: 1em;">
             <children>
                 <Label layoutX="12.0" layoutY="15.0" prefHeight="17.0" prefWidth="161.0" text="Total Authors" textFill="WHITE">
                     <font>
@@ -112,7 +112,7 @@
                     </font>
                 </Label>
             </children></Pane>
-        <Pane layoutX="291.0" layoutY="78.0" prefHeight="120.0" prefWidth="202.0" style="-fx-background-color: #6C63FF; -fx-background-radius: 1em;">
+        <Pane layoutX="291.0" layoutY="78.0" onDragDetected="#switchToManageBook" prefHeight="120.0" prefWidth="202.0" style="-fx-background-color: #6C63FF; -fx-background-radius: 1em;">
             <children>
                 <Label layoutX="11.0" layoutY="14.0" prefHeight="17.0" prefWidth="161.0" text="Total Books" textFill="WHITE">
                     <font>
@@ -130,31 +130,27 @@
                 <Font name="System Bold" size="24.0" />
             </font>
         </Label>
-        <Pane layoutX="810.0" layoutY="9.0" prefHeight="51.0" prefWidth="142.0" style="-fx-background-color: #F8F9FA; -fx-border-radius: 10em; -fx-border-color: black; -fx-background-radius: 10em;">
-            <children>
-                <Label alignment="CENTER" layoutX="60.0" layoutY="11.0" prefHeight="30.0" prefWidth="58.0" text="ADMIN" textFill="#0d0d0d">
-                    <font>
-                        <Font name="System Bold" size="12.0" />
-                    </font>
-                </Label>
-            </children>
-        </Pane>
       <ImageView fitHeight="286.0" fitWidth="439.0" layoutX="286.0" layoutY="226.0">
          <image>
             <Image url="@../../../../java/Assets/undraw_book_reading_kx9s-removebg-preview.png" />
          </image>
       </ImageView>
-      <Button fx:id="Alert" layoutX="726.0" layoutY="226.0" mnemonicParsing="false" prefHeight="286.0" prefWidth="202.0" style="-fx-background-color: #f4d8ff; -fx-background-radius: 1em;" />
+      <Button fx:id="DueDate" layoutX="726.0" layoutY="226.0" mnemonicParsing="false" onAction="#switchToDueDate" prefHeight="286.0" prefWidth="202.0" style="-fx-background-color: #f4d8ff; -fx-background-radius: 1em;" />
       <Label alignment="CENTER" layoutX="745.0" layoutY="239.0" prefHeight="17.0" prefWidth="161.0" text="Due Date" textFill="#2b2869">
          <font>
             <Font name="System Bold" size="26.0" />
          </font>
       </Label>
-      <ImageView fitHeight="100.0" fitWidth="161.0" layoutX="745.0" layoutY="296.0">
+      <ImageView fitHeight="100.0" fitWidth="161.0" layoutX="745.0" layoutY="296.0" onDragDetected="#switchToDueDate">
          <image>
             <Image url="@../../../../java/Assets/alert-removebg-preview.png" />
          </image>
       </ImageView>
+      <Button alignment="CENTER_RIGHT" layoutX="814.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchToDashboard" prefHeight="35.0" prefWidth="115.0" text="ADMIN">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
     </children>
     <cursor>
         <Cursor fx:constant="DEFAULT" />

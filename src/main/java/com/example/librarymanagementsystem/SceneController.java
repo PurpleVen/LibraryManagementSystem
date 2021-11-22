@@ -30,6 +30,46 @@ public class SceneController {
         stage.setScene(scene);
         stage.show();
     }
+
+    public void switchToDueDate(ActionEvent event) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("DueDate.fxml"));
+        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void switchToIssueBook(ActionEvent event) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("IssueBook.fxml"));
+        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void switchToAddBook(ActionEvent event) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("AddBook.fxml"));
+        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void switchToBookDetails(ActionEvent event) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("BookDetails.fxml"));
+        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void switchToManageBook(ActionEvent event) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("ManageBook.fxml"));
+        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 }
 
 

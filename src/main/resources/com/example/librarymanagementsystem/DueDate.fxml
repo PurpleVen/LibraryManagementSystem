@@ -10,11 +10,9 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagementsystem.DueDate">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagementsystem.SceneController">
    <children>
       <AnchorPane layoutY="-3.0" prefHeight="540.0" prefWidth="960.0" style="-fx-background-color: F2F8FF; -fx-background-radius: 1em;">
          <children>
@@ -36,7 +34,7 @@
                         <Font name="Arial Rounded MT Bold" size="20.0" />
                      </font>
                   </Label>
-                  <Button layoutX="15.0" layoutY="212.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Issue" textFill="WHITE">
+                  <Button layoutX="15.0" layoutY="212.0" mnemonicParsing="false" onAction="#switchToIssueBook" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Issue" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -44,7 +42,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button layoutX="13.0" layoutY="257.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Add" textFill="WHITE">
+                  <Button layoutX="13.0" layoutY="257.0" mnemonicParsing="false" onAction="#switchToAddBook" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Add" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -52,7 +50,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button layoutX="12.0" layoutY="303.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Manage" textFill="WHITE">
+                  <Button layoutX="12.0" layoutY="303.0" mnemonicParsing="false" onAction="#switchToBookDetails" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Manage" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -98,15 +96,6 @@
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Pane layoutX="810.0" layoutY="9.0" prefHeight="51.0" prefWidth="142.0" style="-fx-background-color: #F8F9FA; -fx-border-radius: 10em; -fx-border-color: black; -fx-background-radius: 10em;">
-               <children>
-                  <Label alignment="CENTER" layoutX="60.0" layoutY="11.0" prefHeight="30.0" prefWidth="58.0" text="ADMIN" textFill="#0d0d0d">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Label>
-               </children>
-            </Pane>
             <HBox layoutX="294.0" layoutY="134.0" prefHeight="51.0" prefWidth="638.0" style="-fx-background-color: #F8F9FD;">
                <children>
                   <Label prefHeight="51.0" prefWidth="204.0" text="Member Name">
@@ -232,15 +221,21 @@
                   </AnchorPane>
                </content>
             </ScrollPane>
-            <ImageView layoutX="292.0" layoutY="25.0">
+            <ImageView accessibleRole="BUTTON" layoutX="292.0" layoutY="25.0" onDragDetected="#switchToDashboard">
                <image>
                   <Image url="@../../../../java/Assets/icons8-go-back-24.png" />
                </image>
             </ImageView>
+            <Button layoutX="316.0" layoutY="24.0" mnemonicParsing="false" onAction="#switchToDashboard" text="Back" />
          </children>
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </AnchorPane>
+      <Button alignment="CENTER_RIGHT" layoutX="824.0" layoutY="24.0" mnemonicParsing="false" onAction="#switchToDashboard" prefHeight="35.0" prefWidth="115.0" text="ADMIN">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
