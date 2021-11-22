@@ -34,25 +34,25 @@
                     <font>
                         <Font size="18.0" />
                     </font>
-                    <cursor>
-                        <Cursor fx:constant="DEFAULT" />
-                    </cursor>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
                 </Button>
                 <Button layoutX="13.0" layoutY="257.0" mnemonicParsing="false" onAction="#switchToAddBook" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Add" textFill="WHITE">
                     <font>
                         <Font size="18.0" />
                     </font>
-                    <cursor>
-                        <Cursor fx:constant="HAND" />
-                    </cursor>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
                 </Button>
                 <Button layoutX="12.0" layoutY="303.0" mnemonicParsing="false" onAction="#switchToBookDetails" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Manage" textFill="WHITE">
                     <font>
                         <Font size="18.0" />
                     </font>
-                    <cursor>
-                        <Cursor fx:constant="HAND" />
-                    </cursor>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
                 </Button>
                 <Label layoutX="12.0" layoutY="356.0" prefHeight="21.0" prefWidth="115.0" text="Members" textFill="#fcfcfc">
                     <font>
@@ -63,9 +63,9 @@
                     <font>
                         <Font size="18.0" />
                     </font>
-                    <cursor>
-                        <Cursor fx:constant="HAND" />
-                    </cursor>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
                 </Button>
                 <Button layoutX="12.0" layoutY="487.0" mnemonicParsing="false" onAction="#switchTologin" prefHeight="38.0" prefWidth="77.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="LOG OUT" textFill="WHITE">
                     <cursor>
