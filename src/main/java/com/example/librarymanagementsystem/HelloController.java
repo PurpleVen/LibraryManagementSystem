@@ -11,7 +11,7 @@ package com.example.librarymanagementsystem;
 
         import java.sql.*;
 
-public class HelloController extends HelloApplication{
+public class HelloController{
 
     @FXML
     private Button cancelButton;
@@ -46,11 +46,12 @@ public class HelloController extends HelloApplication{
 
     public void ValidateLibManLogin() throws SQLException {
         DatabaseConnector connectNow = new DatabaseConnector();
-       Connection connectDB = DriverManager.getConnection("jdbc:mysql://jblminiproject-do-user-10209104-0.b.db.ondigitalocean.com", "purpleven", "DxWTYB7IuaiGe0BS");
-        //Connection connectDB = connectNow.getConnection();
+       //Connection connectDB = DriverManager.getConnection("jdbc:mysql://jblminiproject-do-user-10209104-0.b.db.ondigitalocean.com", "purpleven", "DxWTYB7IuaiGe0BS");
+        Connection connectDB = connectNow.getConnection();
         //Connection connectDB = DriverManager.getConnection("jblminiproject-do-user-10209104-0.b.db.ondigitalocean.com", "purpleven", "DxWTYB7IuaiGe0BS");
 
         String verifyLogin = "SELECT COUNT(1) FROM login WHERE Username = ' " +Username.getText()+ " ' AND Password =  ' " +Password.getText()+ " ' ";
+
 
         try {
 
