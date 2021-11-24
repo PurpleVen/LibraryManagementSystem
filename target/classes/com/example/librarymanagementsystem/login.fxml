@@ -20,13 +20,13 @@
                         <Font size="14.0" />
                     </font>
                 </Label>
-                <TextField fx:id="Username" layoutX="86.0" layoutY="205.0" onAction="#loginButtonOnAction" prefHeight="26.0" prefWidth="200.0" promptText="Username" style="-fx-background-radius: 7px; -fx-border-color: linear-gradient(to left bottom, #a617ff, #9731fc, #893ff8, #7c49f3, #7051ed, #5a62f3, #4471f6, #2f7df6, #0093fd, #00a8fe, #2cbafd, #5bcbfa); -fx-border-radius: 7px;" />
+                <TextField fx:id="Username" layoutX="86.0" layoutY="205.0" prefHeight="26.0" prefWidth="200.0" promptText="Username" style="-fx-background-radius: 7px; -fx-border-color: linear-gradient(to left bottom, #a617ff, #9731fc, #893ff8, #7c49f3, #7051ed, #5a62f3, #4471f6, #2f7df6, #0093fd, #00a8fe, #2cbafd, #5bcbfa); -fx-border-radius: 7px;" />
                 <Label layoutX="86.0" layoutY="253.0" text="PASSWORD:">
                     <font>
                         <Font size="14.0" />
                     </font>
                 </Label>
-                <Button fx:id="loginButton" layoutX="155.0" layoutY="358.0" mnemonicParsing="false" onAction="#ValidateLibManLogin" prefHeight="31.0" prefWidth="77.0" style="-fx-background-radius: 1em; -fx-border-color: linear-gradient(to left bottom, #a617ff, #9731fc, #893ff8, #7c49f3, #7051ed, #5a62f3, #4471f6, #2f7df6, #0093fd, #00a8fe, #2cbafd, #5bcbfa); -fx-border-radius: 1em; -fx-background-color: White;" text="LOGIN" textFill="#666161">
+                <Button fx:id="loginButton" layoutX="155.0" layoutY="358.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="31.0" prefWidth="77.0" style="-fx-background-radius: 1em; -fx-border-color: linear-gradient(to left bottom, #a617ff, #9731fc, #893ff8, #7c49f3, #7051ed, #5a62f3, #4471f6, #2f7df6, #0093fd, #00a8fe, #2cbafd, #5bcbfa); -fx-border-radius: 1em; -fx-background-color: White;" text="LOGIN" textFill="#666161">
                     <font>
                         <Font name="System Bold" size="14.0" />
                     </font>
@@ -37,7 +37,7 @@
                     </font>
                 </Button>
                 <Label fx:id="LoginMessage" alignment="CENTER" layoutX="67.0" layoutY="147.0" prefHeight="18.0" prefWidth="238.0" textAlignment="CENTER" textFill="#c41717" />
-                <PasswordField fx:id="Password" layoutX="86.0" layoutY="291.0" onAction="#loginButtonOnAction" prefHeight="26.0" prefWidth="200.0" promptText="Password" style="-fx-background-radius: 7px; -fx-border-color: linear-gradient(to left bottom, #a617ff, #9731fc, #893ff8, #7c49f3, #7051ed, #5a62f3, #4471f6, #2f7df6, #0093fd, #00a8fe, #2cbafd, #5bcbfa); -fx-border-radius: 7px;" />
+                <PasswordField fx:id="Password" layoutX="86.0" layoutY="291.0" prefHeight="26.0" prefWidth="200.0" promptText="Password" style="-fx-background-radius: 7px; -fx-border-color: linear-gradient(to left bottom, #a617ff, #9731fc, #893ff8, #7c49f3, #7051ed, #5a62f3, #4471f6, #2f7df6, #0093fd, #00a8fe, #2cbafd, #5bcbfa); -fx-border-radius: 7px;" />
                 <Label layoutX="181.0" layoutY="56.0" text="Library" textFill="#232222">
                     <font>
                         <Font name="Malgun Gothic Bold" size="35.0" />
