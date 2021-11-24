@@ -31,15 +31,7 @@
                   <Font name="Arial Rounded MT Bold" size="20.0" />
                </font>
             </Label>
-            <Button layoutX="15.0" layoutY="212.0" mnemonicParsing="false" onAction="#switchToIssueBook" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold; -fx-border-color: white;" text="Issue " textFill="WHITE">
-               <font>
-                  <Font size="18.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Button layoutX="13.0" layoutY="257.0" mnemonicParsing="false" onAction="#switchToAddBook" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Add" textFill="WHITE">
+            <Button layoutX="14.0" layoutY="263.0" mnemonicParsing="false" onAction="#switchToAddBook" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Add" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
@@ -86,6 +78,14 @@
                   <Image url="@../../../Assets/book-stack.png" />
                </image>
             </ImageView>
+            <Button layoutX="16.0" layoutY="221.0" mnemonicParsing="false" onAction="#switchToIssueBook" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Issue" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
          </children>
       </AnchorPane>
       <AnchorPane layoutX="312.0" layoutY="167.0" prefHeight="350.0" prefWidth="599.0" style="-fx-background-color: #6C63FF; -fx-background-radius: 1em; -fx-border-color: black; -fx-border-radius: 1em;">
@@ -121,7 +121,7 @@
             <DatePicker layoutX="235.0" layoutY="182.0" prefHeight="26.0" prefWidth="334.0" promptText="Return Date" />
          </children>
       </AnchorPane>
-      <Button alignment="CENTER_RIGHT" layoutX="824.0" layoutY="24.0" mnemonicParsing="false" onAction="#switchToDashboard" prefHeight="35.0" prefWidth="115.0" text="ADMIN">
+      <Button alignment="CENTER_RIGHT" layoutX="824.0" layoutY="24.0" mnemonicParsing="false" onAction="#switchToDashboard" prefHeight="35.0" prefWidth="115.0" text="HOME">
          <font>
             <Font size="16.0" />
          </font>
@@ -129,6 +129,11 @@
       <ImageView fitHeight="164.0" fitWidth="200.0" layoutX="512.0" layoutY="13.0">
          <image>
             <Image url="@../../../Assets/undraw_date_picker_gorr-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="838.0" layoutY="30.0">
+         <image>
+            <Image url="@../../../Assets/icons8-go-back-24.png" />
          </image>
       </ImageView>
    </children>

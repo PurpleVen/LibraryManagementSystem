@@ -30,7 +30,7 @@
                         <Font name="Arial Rounded MT Bold" size="20.0" />
                     </font>
                 </Label>
-                <Button layoutX="14.0" layoutY="264.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Add" textFill="WHITE">
+                <Button layoutX="14.0" layoutY="264.0" mnemonicParsing="false" onAction="#AddBook" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Add" textFill="WHITE">
                     <font>
                         <Font size="18.0" />
                     </font>
@@ -38,7 +38,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
                 </Button>
-                <Button layoutX="12.0" layoutY="303.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Manage" textFill="WHITE">
+                <Button layoutX="12.0" layoutY="303.0" mnemonicParsing="false" onAction="#ManageDetailsBook" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Manage" textFill="WHITE">
                     <font>
                         <Font size="18.0" />
                     </font>
@@ -51,7 +51,7 @@
                         <Font name="Arial Rounded MT Bold" size="20.0" />
                     </font>
                 </Label>
-                <Button layoutX="12.0" layoutY="386.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Add" textFill="WHITE">
+                <Button layoutX="12.0" layoutY="386.0" mnemonicParsing="false" onAction="#AddMember" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Add" textFill="WHITE">
                     <font>
                         <Font size="18.0" />
                     </font>
@@ -59,7 +59,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
                 </Button>
-                <Button layoutX="12.0" layoutY="487.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="77.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="LOG OUT" textFill="WHITE">
+                <Button layoutX="12.0" layoutY="487.0" mnemonicParsing="false" onAction="#GoBackToLogin" prefHeight="38.0" prefWidth="77.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="LOG OUT" textFill="WHITE">
                     <cursor>
                         <Cursor fx:constant="HAND" />
                     </cursor></Button>
@@ -68,7 +68,7 @@
                   <Image url="@../../../Assets/book-stack.png" />
                </image>
             </ImageView>
-            <Button layoutX="13.0" layoutY="426.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Manage" textFill="WHITE">
+            <Button layoutX="13.0" layoutY="426.0" mnemonicParsing="false" onAction="#ManageMember" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Manage" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
@@ -135,7 +135,7 @@
             <Image url="@../../../Assets/undraw_book_reading_kx9s-removebg-preview.png" />
          </image>
       </ImageView>
-      <Button fx:id="DueDate" layoutX="726.0" layoutY="226.0" mnemonicParsing="false" prefHeight="286.0" prefWidth="202.0" style="-fx-background-color: #f4d8ff; -fx-background-radius: 1em;" />
+      <Button fx:id="DueDate" layoutX="726.0" layoutY="226.0" mnemonicParsing="false" onAction="#DueDate" prefHeight="286.0" prefWidth="202.0" style="-fx-background-color: #f4d8ff; -fx-background-radius: 1em;" />
       <Label alignment="CENTER" layoutX="745.0" layoutY="239.0" prefHeight="17.0" prefWidth="161.0" text="Due Date" textFill="#2b2869">
          <font>
             <Font name="System Bold" size="26.0" />
