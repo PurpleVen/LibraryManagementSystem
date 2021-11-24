@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="540.0" prefWidth="960.0" style="-fx-background-color: F2F8FF; -fx-background-radius: 1em;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagementsystem.HelloController">
+<AnchorPane prefHeight="540.0" prefWidth="960.0" style="-fx-background-color: F2F8FF; -fx-background-radius: 1em;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagementsystem.DashboardController">
     <children>
         <AnchorPane prefHeight="600.0" prefWidth="271.0" style="-fx-background-color: #242428;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
@@ -30,15 +30,7 @@
                         <Font name="Arial Rounded MT Bold" size="20.0" />
                     </font>
                 </Label>
-                <Button layoutX="15.0" layoutY="212.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Issue" textFill="WHITE">
-                    <font>
-                        <Font size="18.0" />
-                    </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-                </Button>
-                <Button layoutX="13.0" layoutY="257.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Add" textFill="WHITE">
+                <Button layoutX="14.0" layoutY="264.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Add" textFill="WHITE">
                     <font>
                         <Font size="18.0" />
                     </font>
@@ -77,6 +69,14 @@
                </image>
             </ImageView>
             <Button layoutX="13.0" layoutY="426.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Manage" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="14.0" layoutY="223.0" mnemonicParsing="false" onAction="#IssueBook" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Issue" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
@@ -146,11 +146,6 @@
             <Image url="@../../../Assets/alert-removebg-preview.png" />
          </image>
       </ImageView>
-      <Button alignment="CENTER_RIGHT" layoutX="814.0" layoutY="14.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="115.0" text="ADMIN">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Button>
     </children>
     <cursor>
         <Cursor fx:constant="DEFAULT" />
