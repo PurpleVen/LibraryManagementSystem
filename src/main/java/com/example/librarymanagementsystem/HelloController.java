@@ -248,12 +248,13 @@ public  class HelloController extends NullPointerException {
                         Parent root1 = fxmlLoader.load();
                         Stage stage = new Stage();
                         stage.setScene(new Scene(root1));
+                        stage.setResizable(false);
                         stage.show();
                     } catch (Exception ep) {
                         ep.printStackTrace();
                     }
                 } else {
-                    LoginMessage.setText("invalid");
+                    LoginMessage.setText("Invalid Login!");
                 }
             }
         } catch (Exception ep) {
