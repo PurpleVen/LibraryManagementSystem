@@ -210,7 +210,7 @@ import java.sql.*;
 */
 
 
-public  class HelloController extends NullPointerException {
+public  class HelloController extends NullPointerException  {
     @FXML
     private Label LoginMessage;
     @FXML
@@ -220,6 +220,9 @@ public  class HelloController extends NullPointerException {
 
     @FXML
     private Button cancelButton;
+
+    @FXML
+    private Label BookCount;
 
 
     @FXML
@@ -236,6 +239,8 @@ public  class HelloController extends NullPointerException {
     public void validatelogin(ActionEvent e) {
         DatabaseConnector connectnow = new DatabaseConnector();
         Connection connectdb = connectnow.getConnection();
+        ResultSet resultSet = null;
+        PreparedStatement preparedStatement = null;
         String verifylogin = "select count(1) from Login where Username ='" + Username.getText() + "' and Password='" + Password.getText() + "'";
         try {
             Statement statement = connectdb.createStatement();
@@ -250,6 +255,7 @@ public  class HelloController extends NullPointerException {
                         stage.setScene(new Scene(root1));
                         stage.setResizable(false);
                         stage.show();
+
                     } catch (Exception ep) {
                         ep.printStackTrace();
                     }
@@ -268,6 +274,7 @@ public  class HelloController extends NullPointerException {
         stage.close();
 
     }
+
 
 }
 

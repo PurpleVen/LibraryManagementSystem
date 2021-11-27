@@ -6,9 +6,38 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 public class DashboardController {
+
+   /* @FXML
+    private Label BookCount;
+
+    @FXML
+    protected void Refresh(ActionEvent e){
+
+
+        DatabaseConnector connectnow = new DatabaseConnector();
+        Connection connectdb = connectnow.getConnection();
+        ResultSet resultSet = null;
+        PreparedStatement preparedStatement = null;
+
+        try {
+            preparedStatement = "select count(*) from addbook";
+            resultSet = connectdb.createStatement().executeQuery(preparedStatement);
+            BookCount.setText(resultSet.getString(1));
+
+        }catch (
+                SQLException pr) {
+            pr.printStackTrace();
+        }
+    }*/
 
     @FXML
     protected void IssueBook(ActionEvent e){
