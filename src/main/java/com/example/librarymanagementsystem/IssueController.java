@@ -83,6 +83,7 @@ public  class IssueController extends NullPointerException
             ((Node)(e.getSource())).getScene().getWindow().hide();
             Parent root1 = fxmlLoader.load();
             Stage stage = new Stage();
+            stage.setResizable(false);
             stage.setScene(new Scene(root1));
             stage.show();
         } catch(Exception ep) {
@@ -98,6 +99,7 @@ public  class IssueController extends NullPointerException
             ((Node)(e.getSource())).getScene().getWindow().hide();
             Parent root1 = fxmlLoader.load();
             Stage stage = new Stage();
+            stage.setResizable(false);
             stage.setScene(new Scene(root1));
             stage.show();
         } catch(Exception ep) {
