@@ -31,7 +31,7 @@
                   <Font name="Arial Rounded MT Bold" size="20.0" />
                </font>
             </Label>
-            <Button layoutX="14.0" layoutY="263.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Add" textFill="WHITE">
+            <Button layoutX="14.0" layoutY="263.0" mnemonicParsing="false" onAction="#GoToAddBook" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Add" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
@@ -39,7 +39,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button layoutX="12.0" layoutY="303.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Manage" textFill="WHITE">
+            <Button layoutX="12.0" layoutY="303.0" mnemonicParsing="false" onAction="#GoToManageDetailsBook" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Manage" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
@@ -52,7 +52,7 @@
                   <Font name="Arial Rounded MT Bold" size="20.0" />
                </font>
             </Label>
-            <Button layoutX="14.0" layoutY="429.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Manage" textFill="WHITE">
+            <Button layoutX="14.0" layoutY="429.0" mnemonicParsing="false" onAction="#GoToManageMember" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Manage" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
@@ -60,12 +60,12 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button layoutX="12.0" layoutY="487.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="77.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="LOG OUT" textFill="WHITE">
+            <Button layoutX="12.0" layoutY="487.0" mnemonicParsing="false" onAction="#GoBackToLogin" prefHeight="38.0" prefWidth="77.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="LOG OUT" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button layoutX="14.0" layoutY="389.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Add" textFill="WHITE">
+            <Button layoutX="14.0" layoutY="389.0" mnemonicParsing="false" onAction="#GoToAddMember" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Add" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
@@ -119,7 +119,7 @@
             </Button>
             <DatePicker fx:id="Issuedate" layoutX="235.0" layoutY="133.0" prefHeight="26.0" prefWidth="334.0" promptText="Issue Date" />
             <DatePicker fx:id="Returndate" layoutX="235.0" layoutY="182.0" prefHeight="26.0" prefWidth="334.0" promptText="Return Date" />
-            <Label fx:id="IssueBookLabel" layoutX="176.0" layoutY="308.0" prefHeight="27.0" prefWidth="246.0" textFill="#40d167">
+            <Label fx:id="IssueBookLabel" layoutX="176.0" layoutY="308.0" prefHeight="27.0" prefWidth="246.0" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>

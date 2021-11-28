@@ -1,35 +1,49 @@
 package com.example.librarymanagementsystem;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Alert;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import javafx.event.ActionEvent;
-import java.sql.*;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.time.LocalDate;
 
-public  class IssueController extends NullPointerException
-{
+public class AddBookController extends NullPointerException{
+
     @FXML
-    private Label IssueBookLabel;
+    private Label AddBookLabel;
+    @FXML
+    private TextField Booktitle;
     @FXML
     private TextField Bookid;
     @FXML
-    private TextField Memberid;
+    private TextField isbn;
     @FXML
-    private DatePicker Issuedate;
+    private TextField author;
     @FXML
-    private DatePicker Returndate;
+    private TextField genre;
     @FXML
-    protected void IssueButton()
+    private TextField noofcopies;
+
+    @FXML
+    protected void AddButton()
     {
-        String BookID=Bookid.getText();
-        String MemberID=Memberid.getText();
-        LocalDate IssueDate=Issuedate.getValue();
-        LocalDate ReturnDate=Returndate.getValue();
+        String Title= Booktitle.getText();
+        String BookId= Bookid.getText();
+        String BookISBN = isbn.getText();
+        String Author = author.getText();
+        String Genre = genre.getText();
+        String NoOfCopies = noofcopies.getText();
         DatabaseConnector connectnow = new DatabaseConnector();
         Connection connectdb = connectnow.getConnection();
         PreparedStatement psinsert=null;
@@ -38,8 +52,8 @@ public  class IssueController extends NullPointerException
 
         try
         {
-            pscheck=connectdb.prepareStatement("select * from issuebook where BookID= ?");
-            pscheck.setString(1,BookID);
+            pscheck=connectdb.prepareStatement("select * from addbook where BookID= ?");
+            pscheck.setString(1,BookId);
             resultSet=pscheck.executeQuery();
             if(resultSet.isBeforeFirst())
             {
@@ -51,14 +65,16 @@ public  class IssueController extends NullPointerException
             else
             {
 
-                psinsert = connectdb.prepareStatement("insert into issuebook VALUES (?,?,?,?)");
-                psinsert.setString(1, BookID);
-                psinsert.setString(2, MemberID);
-                psinsert.setString(3, IssueDate.toString());
-                psinsert.setString(4, ReturnDate.toString());
+                psinsert = connectdb.prepareStatement("insert into addbook VALUES (?,?,?,?,?,?)");
+                psinsert.setString(1, Title);
+                psinsert.setString(2, BookId);
+                psinsert.setString(3, BookISBN);
+                psinsert.setString(4, Author);
+                psinsert.setString(5, Genre);
+                psinsert.setString(6, NoOfCopies);
                 psinsert.executeUpdate();
 
-                IssueBookLabel.setText("Book Issued Successfully!");
+                AddBookLabel.setText("Book Added Successfully!");
 
 
 
@@ -90,11 +106,11 @@ public  class IssueController extends NullPointerException
         }}
 
     @FXML
-    protected void GoToAddBook(ActionEvent e)
+    protected void GoToIssueBook(ActionEvent e)
 
     {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AddBook.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("IssueBook.fxml"));
             ((Node)(e.getSource())).getScene().getWindow().hide();
             Parent root1 = fxmlLoader.load();
             Stage stage = new Stage();
@@ -164,7 +180,5 @@ public  class IssueController extends NullPointerException
         }
     }
 
+
 }
-
-
-
