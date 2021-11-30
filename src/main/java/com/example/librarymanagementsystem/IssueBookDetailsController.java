@@ -1,96 +1,69 @@
 package com.example.librarymanagementsystem;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-
+import java.net.URL;
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.time.LocalDate;
+import java.sql.Statement;
+import java.util.Date;
+import java.util.ResourceBundle;
 
-public class AddBookController extends NullPointerException{
+public class IssueBookDetailsController implements Initializable {
+    /* @FXML
+private Label IssueBookLabel;*/
+    @FXML
+    private TableView<IssueDetailsInfo> table1;
+    @FXML
+    private TableColumn<IssueDetailsInfo, Integer> bookid;
+    @FXML
+    private TableColumn<IssueDetailsInfo, Integer> memberid;
+    @FXML
+    private TableColumn<IssueDetailsInfo, Date> issuedate;
+    @FXML
+    private TableColumn<IssueDetailsInfo, Date> returndate;
 
-    @FXML
-    private Label AddBookLabel;
-    @FXML
-    private TextField Booktitle;
-    @FXML
-    private TextField Bookid;
-    @FXML
-    private TextField isbn;
-    @FXML
-    private TextField author;
-    @FXML
-    private TextField genre;
-    @FXML
-    private TextField noofcopies;
+    final ObservableList<IssueDetailsInfo> listview1 = FXCollections.observableArrayList();
+    @Override
+    public void initialize(URL url, ResourceBundle rb){
+        bookid.setCellValueFactory(new PropertyValueFactory<>("BookID"));
+        memberid.setCellValueFactory(new PropertyValueFactory<>("MemberID"));
+        issuedate.setCellValueFactory(new PropertyValueFactory<>("IssueDate"));
+        returndate.setCellValueFactory(new PropertyValueFactory<>("ReturnDate"));
+        try{
+            DatabaseConnector connectnow = new DatabaseConnector();
+            Connection connectdb = connectnow.getConnection();
 
-    @FXML
-    protected void AddButton()
-    {
-        String Title= Booktitle.getText();
-        String BookId= Bookid.getText();
-        String BookISBN = isbn.getText();
-        String Author = author.getText();
-        String Genre = genre.getText();
-        String NoOfCopies = noofcopies.getText();
-        DatabaseConnector connectnow = new DatabaseConnector();
-        Connection connectdb = connectnow.getConnection();
-        PreparedStatement psinsert=null;
-        PreparedStatement pscheck=null;
-        ResultSet resultSet=null;
+            String sql = "select *  from issuebook";
+            Statement s1 = connectdb.createStatement();
+            ResultSet resultSet = s1.executeQuery(sql);
 
-        try
-        {
-            pscheck=connectdb.prepareStatement("select * from addbook where BookID= ?");
-            pscheck.setString(1,BookId);
-            resultSet=pscheck.executeQuery();
-            if(resultSet.isBeforeFirst())
-            {
-                System.out.println("There Exists Already A Book With The Given ID");
-                Alert alert=new Alert(Alert.AlertType.ERROR);
-                alert.setContentText("BookID Already Exists");
-                alert.show();
+            while (resultSet.next()){
+                listview1.add(new IssueDetailsInfo(resultSet.getInt("BookID"),
+                        resultSet.getInt("MemberID"),
+                        resultSet.getDate("IssueDate"),
+                        resultSet.getDate("ReturnDate")));
             }
-            else
-            {
+            table1.setItems(listview1);
 
-                psinsert = connectdb.prepareStatement("insert into addbook VALUES (?,?,?,?,?,?)");
-                psinsert.setString(1, Title);
-                psinsert.setString(2, BookId);
-                psinsert.setString(3, BookISBN);
-                psinsert.setString(4, Author);
-                psinsert.setString(5, Genre);
-                psinsert.setString(6, NoOfCopies);
-                psinsert.executeUpdate();
-
-                AddBookLabel.setText("Book Added Successfully!");
-
-
-
-            }
-        }catch(SQLException ep)
-        {
-            ep.printStackTrace();
         }
+        catch (Exception ep){
+            ep.printStackTrace();
 
+        }
     }
-
-
-
-
-
     @FXML
     protected void GoToDashboard(ActionEvent e)
 
@@ -100,6 +73,7 @@ public class AddBookController extends NullPointerException{
             ((Node)(e.getSource())).getScene().getWindow().hide();
             Parent root1 = fxmlLoader.load();
             Stage stage = new Stage();
+            stage.setResizable(false);
             stage.setScene(new Scene(root1));
             stage.show();
         } catch(Exception ep) {
@@ -107,24 +81,9 @@ public class AddBookController extends NullPointerException{
         }}
 
     @FXML
-    protected void GoToIssueBook(ActionEvent e)
-
-    {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("IssueBook.fxml"));
-            ((Node)(e.getSource())).getScene().getWindow().hide();
-            Parent root1 = fxmlLoader.load();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root1));
-            stage.show();
-        } catch(Exception ep) {
-            ep.printStackTrace();
-        }}
-
-    @FXML
-    protected void GoToManageDetailsBook(ActionEvent e){
+    protected void GoToIssueBook(ActionEvent e){
         try{
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("BookDetails.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("IssueBook.fxml"));
             ((Node)(e.getSource())).getScene().getWindow().hide();
             Parent root1 = fxmlLoader.load();
             Stage stage = new Stage();
@@ -135,6 +94,22 @@ public class AddBookController extends NullPointerException{
             ep.printStackTrace();
         }
     }
+
+    @FXML
+    protected void GoToAddBook(ActionEvent e)
+
+    {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AddBook.fxml"));
+            ((Node)(e.getSource())).getScene().getWindow().hide();
+            Parent root1 = fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setResizable(false);
+            stage.setScene(new Scene(root1));
+            stage.show();
+        } catch(Exception ep) {
+            ep.printStackTrace();
+        }}
 
     @FXML
     protected void GoToAddMember(ActionEvent e){
@@ -183,3 +158,4 @@ public class AddBookController extends NullPointerException{
 
 
 }
+

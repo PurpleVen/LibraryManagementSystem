@@ -1,9 +1,10 @@
 package com.example.librarymanagementsystem;
 
-public class info {
-    String id, title, isbn, author, genre, quantity;
+public class BookDetailsinfo {
+    String  id, isbn, title,  author, genre;
+    int quantity;
 
-    public info(String id, String title, String isbn, String author, String genre, String quantity){
+    public BookDetailsinfo(String id, String title, String isbn, String author, String genre, int quantity){
         this.id=id;
         this.title=title;
         this.isbn=isbn;
@@ -12,7 +13,7 @@ public class info {
         this.quantity=quantity;
     }
 
-    public String getBookId(){
+    public String getBookID(){
         return id;
     }
 
@@ -52,7 +53,7 @@ public class info {
         this.genre=genre;
     }
 
-    public String getNoOfCopies(){
+    public int getNoOfCopies(){
         return quantity;
     }
 
