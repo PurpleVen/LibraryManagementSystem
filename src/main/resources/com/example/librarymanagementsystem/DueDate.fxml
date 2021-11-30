@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagementsystem.SceneController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagementsystem.DuedateDetailsController">
    <children>
       <AnchorPane layoutY="-3.0" prefHeight="540.0" prefWidth="960.0" style="-fx-background-color: F2F8FF; -fx-background-radius: 1em;">
          <children>
@@ -34,7 +34,7 @@
                         <Font name="Arial Rounded MT Bold" size="20.0" />
                      </font>
                   </Label>
-                  <Button layoutX="15.0" layoutY="212.0" mnemonicParsing="false" onAction="#switchToIssueBook" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Issue" textFill="WHITE">
+                  <Button layoutX="15.0" layoutY="212.0" mnemonicParsing="false" onAction="#GoToIssueBook" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Issue" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -42,7 +42,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button layoutX="13.0" layoutY="257.0" mnemonicParsing="false" onAction="#switchToAddBook" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Add" textFill="WHITE">
+                  <Button layoutX="13.0" layoutY="257.0" mnemonicParsing="false" onAction="#GoToAddBook" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Add" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -50,7 +50,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button layoutX="12.0" layoutY="303.0" mnemonicParsing="false" onAction="#switchToBookDetails" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Manage" textFill="WHITE">
+                  <Button layoutX="12.0" layoutY="303.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Manage" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -63,7 +63,7 @@
                         <Font name="Arial Rounded MT Bold" size="20.0" />
                      </font>
                   </Label>
-                  <Button layoutX="12.0" layoutY="386.0" mnemonicParsing="false" onAction="#switchToMemberAdd" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Add" textFill="WHITE">
+                  <Button layoutX="12.0" layoutY="386.0" mnemonicParsing="false" onAction="#GoToAddMember" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Add" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -71,7 +71,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button layoutX="12.0" layoutY="487.0" mnemonicParsing="false" onAction="#switchTologin" prefHeight="38.0" prefWidth="77.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="LOG OUT" textFill="WHITE">
+                  <Button layoutX="12.0" layoutY="487.0" mnemonicParsing="false" onAction="#GoBackToLogin" prefHeight="38.0" prefWidth="77.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="LOG OUT" textFill="WHITE">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
@@ -81,7 +81,7 @@
                         <Image url="@../../../Assets/book-stack.png" />
                      </image>
                   </ImageView>
-                  <Button layoutX="13.0" layoutY="426.0" mnemonicParsing="false" onAction="#switchToMemberDetails" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Manage" textFill="WHITE">
+                  <Button layoutX="13.0" layoutY="426.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Manage" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -96,151 +96,41 @@
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <HBox layoutX="294.0" layoutY="134.0" prefHeight="51.0" prefWidth="638.0" style="-fx-background-color: #F8F9FD;">
-               <children>
-                  <Label prefHeight="51.0" prefWidth="204.0" text="Member Name">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
-                  </Label>
-                  <Label prefHeight="51.0" prefWidth="218.0" text="Book Name">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
-                  </Label>
-                  <Label prefHeight="51.0" prefWidth="119.0" text="Due Date">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
-                  </Label>
-                  <Label prefHeight="51.0" prefWidth="98.0" text="Fine (Rs)">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
-                  </Label>
-               </children>
-            </HBox>
-            <ScrollPane layoutX="292.0" layoutY="195.0" prefHeight="313.0" prefWidth="647.0">
-               <content>
-                  <AnchorPane prefHeight="322.0" prefWidth="629.0">
-                     <children>
-                        <Label layoutX="206.0" layoutY="24.0" prefHeight="51.0" prefWidth="187.0" text="Nancy Drew: The Curse" textAlignment="RIGHT">
-                           <font>
-                              <Font size="16.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="206.0" layoutY="90.0" text="Learn java in one minute">
-                           <font>
-                              <Font size="16.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="206.0" layoutY="143.0" text="Linux for Dummies">
-                           <font>
-                              <Font size="16.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="209.0" layoutY="194.0" text="Oxford Dictionary">
-                           <font>
-                              <Font size="16.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="50.0" layoutY="40.0" prefHeight="18.0" prefWidth="92.0" text="Vendra">
-                           <font>
-                              <Font size="16.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="53.0" layoutY="90.0" prefHeight="26.0" prefWidth="58.0" text="Tushar">
-                           <font>
-                              <Font size="16.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="53.0" layoutY="142.0" prefHeight="26.0" prefWidth="58.0" text="Saanvi">
-                           <font>
-                              <Font size="16.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="65.0" layoutY="194.0" text="Om">
-                           <font>
-                              <Font size="16.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="446.0" layoutY="37.0" text="21-11-2021">
-                           <font>
-                              <Font size="16.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="446.0" layoutY="87.0" text="23-11-2021">
-                           <font>
-                              <Font size="16.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="463.0" layoutY="147.0" />
-                        <Label layoutX="443.0" layoutY="192.0" text="30-11-2021">
-                           <font>
-                              <Font size="16.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="443.0" layoutY="143.0" text="25-11-2021">
-                           <font>
-                              <Font size="16.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="570.0" layoutY="37.0" text="50">
-                           <font>
-                              <Font size="16.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="568.0" layoutY="87.0" text="50">
-                           <font>
-                              <Font size="16.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="567.0" layoutY="141.0" text="50">
-                           <font>
-                              <Font size="16.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="567.0" layoutY="192.0" text="50">
-                           <font>
-                              <Font size="16.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </AnchorPane>
-               </content>
-            </ScrollPane>
+            <HBox layoutX="294.0" layoutY="134.0" prefHeight="51.0" prefWidth="638.0" style="-fx-background-color: #F8F9FD;" />
             <ImageView accessibleRole="BUTTON" layoutX="292.0" layoutY="25.0" onDragDetected="#switchToDashboard">
                <image>
                   <Image url="@../../../Assets/icons8-go-back-24.png" />
                </image>
             </ImageView>
-            <Button layoutX="316.0" layoutY="24.0" mnemonicParsing="false" onAction="#switchToDashboard" text="Back" />
-            <ImageView fitHeight="100.0" fitWidth="161.0" layoutX="525.0" layoutY="40.0" onMouseClicked="#switchToDueDate">
+            <Button layoutX="316.0" layoutY="24.0" mnemonicParsing="false" text="Back" />
+            <ImageView fitHeight="160.0" fitWidth="261.0" layoutX="504.0" layoutY="37.0" onMouseClicked="#switchToDueDate">
                <image>
                   <Image url="@../../../Assets/alert-removebg-preview.png" />
                </image>
             </ImageView>
+            <TableView fx:id="table" layoutX="285.0" layoutY="168.0" prefHeight="350.0" prefWidth="662.0">
+               <columns>
+                  <TableColumn fx:id="memberid" prefWidth="76.66665649414062" text="Member ID" />
+                  <TableColumn fx:id="membername" prefWidth="190.0" text="Member Name" />
+                  <TableColumn fx:id="bookname" minWidth="0.0" prefWidth="244.0" text="Book Name " />
+                  <TableColumn fx:id="duedate" prefWidth="84.6666259765625" text="Due Date" />
+                  <TableColumn fx:id="fine" prefWidth="66.6666259765625" text="Fine (Rs)" />
+               </columns>
+            </TableView>
          </children>
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </AnchorPane>
-      <Button alignment="CENTER_RIGHT" layoutX="824.0" layoutY="24.0" mnemonicParsing="false" onAction="#switchToDashboard" prefHeight="35.0" prefWidth="115.0" text="ADMIN">
+      <Button alignment="CENTER_RIGHT" layoutX="818.0" layoutY="25.0" mnemonicParsing="false" onAction="#GoToDashboard" prefHeight="35.0" prefWidth="115.0" text="HOME">
          <font>
             <Font size="16.0" />
          </font>
       </Button>
+      <ImageView layoutX="833.0" layoutY="31.0">
+         <image>
+            <Image url="@../../../Assets/icons8-go-back-24.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
