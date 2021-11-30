@@ -1,4 +1,4 @@
-package com.example.librarymanagementsystem;
+/*package com.example.librarymanagementsystem;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -24,7 +24,7 @@ import java.util.ResourceBundle;
 public class IssueBookDetailsController implements Initializable {
     /* @FXML
 private Label IssueBookLabel;*/
-    @FXML
+ /*   @FXML
     private TableView<IssueDetailsInfo> table1;
     @FXML
     private TableColumn<IssueDetailsInfo, Integer> bookid;
@@ -159,3 +159,4 @@ private Label IssueBookLabel;*/
 
 }
 
+*/

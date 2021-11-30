@@ -91,7 +91,7 @@
       </AnchorPane>
       <ScrollPane hbarPolicy="NEVER" layoutX="296.0" layoutY="173.0" prefHeight="346.0" prefWidth="676.0" style="-fx-background-color: #F8F9FD;" vbarPolicy="ALWAYS">
          <content>
-            <TableView fx:id="table" prefHeight="350.0" prefWidth="662.0">
+            <TableView fx:id="table" prefHeight="346.0" prefWidth="662.0">
                <columns>
                   <TableColumn fx:id="id" prefWidth="44.00000077486038" text="ID" />
                   <TableColumn fx:id="title" prefWidth="207.99999618530273" text="Title" />
