@@ -18,61 +18,29 @@ import java.sql.*;
 import java.util.Date;
 import java.util.ResourceBundle;
 
-public class BookDetailsController implements Initializable {
-
-   /* @FXML
-    private Label IssueBookLabel;*/
+public class ManageBookController {
     @FXML
-    private TableView<BookDetailsinfo> table;
+    private Button EditButton;
     @FXML
-    private TableColumn<BookDetailsinfo, String> id;
+    private Button DeleteButton;
     @FXML
-    private TableColumn<BookDetailsinfo, String> title;
+    private TextField title;
     @FXML
-    private TableColumn<BookDetailsinfo, String> isbn;
+    private TextField id;
     @FXML
-    private TableColumn<BookDetailsinfo, String> author;
+    private TextField isbn;
     @FXML
-    private TableColumn<BookDetailsinfo, String> quantity;
+    private TextField author;
     @FXML
-    private TableColumn<BookDetailsinfo, String> genre;
+    private TextField genre;
+    @FXML
+    private TextField quantity;
+    @FXML
+    private Label StatusLabel;
 
 
-    final ObservableList<BookDetailsinfo> listview = FXCollections.observableArrayList();
-    @Override
-    public void initialize(URL url, ResourceBundle rb){
-        id.setCellValueFactory(new PropertyValueFactory<>("BookID"));
-        title.setCellValueFactory(new PropertyValueFactory<>("title"));
-        isbn.setCellValueFactory(new PropertyValueFactory<>("BookISBN"));
-        author.setCellValueFactory(new PropertyValueFactory<>("author"));
-        genre.setCellValueFactory(new PropertyValueFactory<>("genre"));
-        quantity.setCellValueFactory(new PropertyValueFactory<>("NoOfCopies"));
-        try{
-            DatabaseConnector connectnow = new DatabaseConnector();
-            Connection connectdb = connectnow.getConnection();
 
-            String sql = "select *  from addbook";
-            Statement s = connectdb.createStatement();
-            ResultSet resultSet = s.executeQuery(sql);
-
-            while (resultSet.next()){
-                listview.add(new BookDetailsinfo(resultSet.getString("BookID"),
-                                      resultSet.getString("Title"),
-                                      resultSet.getString("BookISBN"),
-                                      resultSet.getString("Author"),
-                                      resultSet.getString("Genre"),
-                                      resultSet.getInt("NoOfCopies")));
-            }
-            table.setItems(listview);
-
-        }
-        catch (Exception e){
-            e.printStackTrace();
-
-        }
-    }
-
-    /*private void button(ActionEvent event){
+      public void button(ActionEvent event){
         if(event.getSource() == EditButton){
             EditBookDetails();
         }
@@ -81,12 +49,14 @@ public class BookDetailsController implements Initializable {
 
         }
 
-    }*/
+    }
 
-   /* private void EditBookDetails(){
-        String query = "Update addbook set Title = ' " +title.getText()+ " ', BookID = ' " +id.getText()+ " ',BookISBN =  " +isbn.getText()+ " ,Author =  " +author.getText()+ " ,NoOfCopies =  " +quantity.getText()+ "";
+    private void EditBookDetails(){
+        DatabaseConnector connectnow = new DatabaseConnector();
+        Connection connectdb = connectnow.getConnection();
+        String query = "Update addbook set Title = ' "+title.getText()+" ' , BookISBN = ' "+isbn.getText()+" ', Author = ' "+author.getText()+" ', Genre = ' "+genre.getText()+ " ', NoOfCopies = "+quantity.getText()+" where BookID = "+id.getText()+"";
         executeQuery(query);
-        //BookDetailsinfo();
+       StatusLabel.setText("Updated Successfully");
     }
 
     private void executeQuery(String query){
@@ -100,18 +70,16 @@ public class BookDetailsController implements Initializable {
             ex.printStackTrace();
         }
 
-    }*/
+    }
 
-    /*private void DeleteBookDetails(){
+    private void DeleteBookDetails(){
+        DatabaseConnector connectnow = new DatabaseConnector();
+        Connection connectdb = connectnow.getConnection();
         String query = "Delete from addbook where BookID = " +id.getText()+ " ";
         executeQuery(query);
-      //  BookDetailsinfo();
-    }*/
+        StatusLabel.setText("Deleted Successfully");
 
-
-
-
-
+    }
 
     @FXML
     protected void GoToDashboard(ActionEvent e)
@@ -190,20 +158,7 @@ public class BookDetailsController implements Initializable {
         }
     }
 
-    @FXML
-    protected void GoToManageBook(ActionEvent e) {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ManageBook.fxml"));
-            ((Node) (e.getSource())).getScene().getWindow().hide();
-            Parent root1 = fxmlLoader.load();
-            Stage stage = new Stage();
-            stage.setResizable(false);
-            stage.setScene(new Scene(root1));
-            stage.show();
-        } catch (Exception ep) {
-            ep.printStackTrace();
-        }
-    }
+
 
     @FXML
     protected void GoToManageMemberDetails(ActionEvent e){
@@ -236,8 +191,4 @@ public class BookDetailsController implements Initializable {
     }
 
 }
-
-
-
-
 

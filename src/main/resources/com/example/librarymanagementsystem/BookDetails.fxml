@@ -49,9 +49,9 @@
             </Button>
          </children>
       </AnchorPane>
-      <ScrollPane hbarPolicy="NEVER" layoutX="296.0" layoutY="173.0" prefHeight="346.0" prefWidth="676.0" style="-fx-background-color: #F8F9FD;" vbarPolicy="ALWAYS">
+      <ScrollPane hbarPolicy="NEVER" layoutX="296.0" layoutY="173.0" prefHeight="325.0" prefWidth="676.0" style="-fx-background-color: #F8F9FD;" vbarPolicy="ALWAYS">
          <content>
-            <TableView fx:id="table" prefHeight="346.0" prefWidth="662.0">
+            <TableView fx:id="table" prefHeight="327.0" prefWidth="662.0">
                <columns>
                   <TableColumn fx:id="id" prefWidth="44.00000077486038" text="ID" />
                   <TableColumn fx:id="title" prefWidth="207.99999618530273" text="Title" />
@@ -103,6 +103,7 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
+      <Button layoutX="316.0" layoutY="33.0" mnemonicParsing="false" onAction="#GoToManageBook" text="Click here to edit" />
    </children>
    <cursor>
       <Cursor fx:constant="DEFAULT" />

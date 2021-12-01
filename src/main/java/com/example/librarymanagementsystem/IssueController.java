@@ -72,6 +72,7 @@ public  class IssueController extends NullPointerException {
     }
 
 
+
         @FXML
         protected void GoToDashboard(ActionEvent e) {
             try {
