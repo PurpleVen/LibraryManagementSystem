@@ -85,6 +85,21 @@ public class DashboardController {
     }
 
     @FXML
+    protected void IssueBookDetails(ActionEvent e){
+        try{
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("IssueDetails.fxml"));
+            ((Node)(e.getSource())).getScene().getWindow().hide();
+            Parent root1 = fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root1));
+            stage.setResizable(false);
+            stage.show();
+        } catch (Exception ep){
+            ep.printStackTrace();
+        }
+    }
+
+    @FXML
     protected void AddBook(ActionEvent e){
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AddBook.fxml"));

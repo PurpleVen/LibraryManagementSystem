@@ -56,12 +56,7 @@
          </image>
       </ImageView>
       <Button fx:id="DueDate" layoutX="726.0" layoutY="226.0" mnemonicParsing="false" onAction="#DueDate" prefHeight="286.0" prefWidth="202.0" style="-fx-background-color: #f4d8ff; -fx-background-radius: 1em;" />
-      <Label alignment="CENTER" layoutX="745.0" layoutY="239.0" prefHeight="17.0" prefWidth="161.0" text="Due Date" textFill="#2b2869">
-         <font>
-            <Font name="System Bold" size="26.0" />
-         </font>
-      </Label>
-      <ImageView fitHeight="100.0" fitWidth="161.0" layoutX="745.0" layoutY="296.0">
+      <ImageView fitHeight="100.0" fitWidth="161.0" layoutX="751.0" layoutY="254.0">
          <image>
             <Image url="@../../../Assets/alert-removebg-preview.png" />
          </image>
@@ -92,7 +87,7 @@
          </font>
       </Button>
       <Button layoutX="291.0" layoutY="76.0" mnemonicParsing="false" onAction="#ToatlBooks" prefHeight="120.0" prefWidth="202.0" style="-fx-background-color: #6C63FF; -fx-background-radius: 1em;" />
-          <Label fx:id="TotalBookCount" layoutX="303.0" layoutY="124.0" prefHeight="63.0" prefWidth="92.0" textFill="WHITE">
+          <Label fx:id="TotalBookCount" layoutX="303.0" layoutY="124.0" prefHeight="63.0" prefWidth="92.0" style="-fx-border-color: linear-gradient(to left bottom, #a617ff, #9731fc, #893ff8, #7c49f3, #7051ed, #5a62f3, #4471f6, #2f7df6, #0093fd, #00a8fe, #2cbafd, #5bcbfa);" textFill="WHITE">
               <font>
                   <Font name="System Bold" size="30.0" />
               </font>
@@ -103,7 +98,7 @@
               </font>
       </Label>
       <Button layoutX="506.0" layoutY="76.0" mnemonicParsing="false" prefHeight="120.0" prefWidth="202.0" style="-fx-background-color: #3F3D56; -fx-background-radius: 1em;" />
-          <Label fx:id="MemberCount" layoutX="515.0" layoutY="123.0" prefHeight="63.0" prefWidth="92.0" textFill="WHITE">
+          <Label fx:id="MemberCount" layoutX="515.0" layoutY="123.0" prefHeight="63.0" prefWidth="92.0" style="-fx-border-color: linear-gradient(to left bottom, #a617ff, #9731fc, #893ff8, #7c49f3, #7051ed, #5a62f3, #4471f6, #2f7df6, #0093fd, #00a8fe, #2cbafd, #5bcbfa);" textFill="WHITE">
               <font>
                   <Font name="System Bold" size="30.0" />
               </font>
@@ -119,11 +114,21 @@
                   <Font name="System Bold" size="24.0" />
               </font>
           </Label>
-          <Label fx:id="IssuedBookCount" layoutX="739.0" layoutY="124.0" prefHeight="63.0" prefWidth="92.0" textFill="WHITE">
+          <Label fx:id="IssuedBookCount" layoutX="739.0" layoutY="124.0" prefHeight="63.0" prefWidth="92.0" style="-fx-border-color: linear-gradient(to left bottom, #a617ff, #9731fc, #893ff8, #7c49f3, #7051ed, #5a62f3, #4471f6, #2f7df6, #0093fd, #00a8fe, #2cbafd, #5bcbfa);" textFill="WHITE">
               <font>
                   <Font name="System Bold" size="30.0" />
               </font>
           </Label>
+      <Button layoutX="752.0" layoutY="450.0" mnemonicParsing="false" onAction="#IssueBookDetails" prefHeight="35.0" prefWidth="146.0" style="-fx-font: bold; -fx-background-color: #f4d8ff; -fx-background-radius: 1em; -fx-border-color: linear-gradient(to left bottom, #a617ff, #9731fc, #893ff8, #7c49f3, #7051ed, #5a62f3, #4471f6, #2f7df6, #0093fd, #00a8fe, #2cbafd, #5bcbfa); -fx-border-radius: 1em;" text="Issued Book List" textFill="#2b2869">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="754.0" layoutY="399.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="146.0" style="-fx-font: bold; -fx-background-color: #f4d8ff; -fx-background-radius: 1em; -fx-border-color: linear-gradient(to left bottom, #a617ff, #9731fc, #893ff8, #7c49f3, #7051ed, #5a62f3, #4471f6, #2f7df6, #0093fd, #00a8fe, #2cbafd, #5bcbfa); -fx-border-radius: 1em;" text="Due Date List" textFill="#2b2869">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
     </children>
     <cursor>
         <Cursor fx:constant="DEFAULT" />

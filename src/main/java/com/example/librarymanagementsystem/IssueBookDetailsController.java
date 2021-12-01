@@ -1,4 +1,4 @@
-/*package com.example.librarymanagementsystem;
+package com.example.librarymanagementsystem;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -22,10 +22,9 @@ import java.util.Date;
 import java.util.ResourceBundle;
 
 public class IssueBookDetailsController implements Initializable {
-    /* @FXML
-private Label IssueBookLabel;*/
- /*   @FXML
-    private TableView<IssueDetailsInfo> table1;
+
+    @FXML
+    private TableView<IssueDetailsInfo> table;
     @FXML
     private TableColumn<IssueDetailsInfo, Integer> bookid;
     @FXML
@@ -35,7 +34,7 @@ private Label IssueBookLabel;*/
     @FXML
     private TableColumn<IssueDetailsInfo, Date> returndate;
 
-    final ObservableList<IssueDetailsInfo> listview1 = FXCollections.observableArrayList();
+    final ObservableList<IssueDetailsInfo> listview = FXCollections.observableArrayList();
     @Override
     public void initialize(URL url, ResourceBundle rb){
         bookid.setCellValueFactory(new PropertyValueFactory<>("BookID"));
@@ -51,12 +50,12 @@ private Label IssueBookLabel;*/
             ResultSet resultSet = s1.executeQuery(sql);
 
             while (resultSet.next()){
-                listview1.add(new IssueDetailsInfo(resultSet.getInt("BookID"),
+                listview.add(new IssueDetailsInfo(resultSet.getInt("BookID"),
                         resultSet.getInt("MemberID"),
                         resultSet.getDate("IssueDate"),
                         resultSet.getDate("ReturnDate")));
             }
-            table1.setItems(listview1);
+            table.setItems(listview);
 
         }
         catch (Exception ep){
@@ -127,7 +126,7 @@ private Label IssueBookLabel;*/
     }
 
     @FXML
-    protected void GoToManageMember(ActionEvent e){
+    protected void GoToManageMemberDetails(ActionEvent e){
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MemberManage.fxml"));
             ((Node)(e.getSource())).getScene().getWindow().hide();
@@ -159,4 +158,3 @@ private Label IssueBookLabel;*/
 
 }
 
-*/
