@@ -56,7 +56,7 @@
       </ImageView>
       <ScrollPane hbarPolicy="NEVER" layoutX="287.0" layoutY="177.0" prefHeight="346.0" prefWidth="665.0" vbarPolicy="ALWAYS">
          <content>
-            <TableView fx:id="table" prefHeight="344.0" prefWidth="666.0">
+            <TableView fx:id="table" prefHeight="344.0" prefWidth="666.0" style="-fx-border-color: linear-gradient(to left bottom, #a617ff, #9731fc, #893ff8, #7c49f3, #7051ed, #5a62f3, #4471f6, #2f7df6, #0093fd, #00a8fe, #2cbafd, #5bcbfa);">
                <columns>
                   <TableColumn fx:id="name" prefWidth="162.22220361232758" text="Name" />
                   <TableColumn fx:id="memberid" prefWidth="82.4000244140625" text="Member ID" />
@@ -101,6 +101,7 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
+      <Button layoutX="287.0" layoutY="137.0" mnemonicParsing="false" onAction="#GoToManageMember" prefHeight="38.0" prefWidth="115.0" style="-fx-border-color: linear-gradient(to left bottom, #a617ff, #9731fc, #893ff8, #7c49f3, #7051ed, #5a62f3, #4471f6, #2f7df6, #0093fd, #00a8fe, #2cbafd, #5bcbfa);" text="Click here to edit" />
    </children>
    <cursor>
       <Cursor fx:constant="DEFAULT" />
