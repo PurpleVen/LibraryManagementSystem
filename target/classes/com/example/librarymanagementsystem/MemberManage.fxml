@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="540.0" prefWidth="960.0" style="-fx-background-color: F2F8FF; -fx-background-radius: 1em;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagementsystem.SceneController">
+<AnchorPane prefHeight="540.0" prefWidth="960.0" style="-fx-background-color: F2F8FF; -fx-background-radius: 1em;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.librarymanagementsystem.MemberDetailsController">
    <children>
       <AnchorPane prefHeight="600.0" prefWidth="271.0" style="-fx-background-color: #242428;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -35,52 +35,12 @@
                   <Font name="Arial Rounded MT Bold" size="20.0" />
                </font>
             </Label>
-            <Button layoutX="15.0" layoutY="212.0" mnemonicParsing="false" onAction="#switchToIssueBook" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Issue " textFill="WHITE">
-               <font>
-                  <Font size="18.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Button layoutX="13.0" layoutY="257.0" mnemonicParsing="false" onAction="#switchToAddBook" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Add" textFill="WHITE">
-               <font>
-                  <Font size="18.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Button layoutX="12.0" layoutY="303.0" mnemonicParsing="false" onAction="#switchToBookDetails" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Manage" textFill="WHITE">
-               <font>
-                  <Font size="18.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
             <Label layoutX="12.0" layoutY="356.0" prefHeight="21.0" prefWidth="115.0" text="Members" textFill="#fcfcfc">
                <font>
                   <Font name="Arial Rounded MT Bold" size="20.0" />
                </font>
             </Label>
-            <Button layoutX="14.0" layoutY="429.0" mnemonicParsing="false" onAction="#switchToMemberDetails" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold; -fx-border-color: white;" text="Manage" textFill="WHITE">
-               <font>
-                  <Font size="18.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
             <Button layoutX="12.0" layoutY="487.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="77.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="LOG OUT" textFill="WHITE">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Button layoutX="14.0" layoutY="389.0" mnemonicParsing="false" onAction="#switchToMemberAdd" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Add" textFill="WHITE">
-               <font>
-                  <Font size="18.0" />
-               </font>
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -130,15 +90,45 @@
             <Image url="@../../../Assets/icons8-go-back-24.png" />
          </image>
       </ImageView>
-      <Button alignment="CENTER_RIGHT" layoutX="833.0" layoutY="22.0" mnemonicParsing="false" onAction="#switchToDashboard" prefHeight="35.0" prefWidth="115.0" text="ADMIN">
+      <Button layoutX="321.0" layoutY="27.0" mnemonicParsing="false" onAction="#GoToManageMemberDetails" text="Back" />
+      <ImageView fitHeight="146.0" fitWidth="214.0" layoutX="505.0" layoutY="22.0">
+         <image>
+            <Image url="@../../../Assets/undraw_subscriptions_re_k7jj-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="15.0" layoutY="211.0" mnemonicParsing="false" onAction="#GoToIssueBook" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428;" text="Issue" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="15.0" layoutY="258.0" mnemonicParsing="false" onAction="#GoToAddBook" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428;" text="Add" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="16.0" layoutY="301.0" mnemonicParsing="false" onAction="#GoToManageBook" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428;" text="Manage" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="15.0" layoutY="381.0" mnemonicParsing="false" onAction="#GoToAddMember" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428;" text="Add" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="14.0" layoutY="422.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-border-color: white;" text="Manage" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button alignment="CENTER_RIGHT" layoutX="833.0" layoutY="17.0" mnemonicParsing="false" onAction="#GoToDashboard" prefHeight="35.0" prefWidth="115.0" text="HOME">
          <font>
             <Font size="16.0" />
          </font>
       </Button>
-      <Button layoutX="321.0" layoutY="27.0" mnemonicParsing="false" onAction="#switchToMemberDetails" text="Back" />
-      <ImageView fitHeight="146.0" fitWidth="214.0" layoutX="505.0" layoutY="22.0">
+      <ImageView layoutX="847.0" layoutY="23.0">
          <image>
-            <Image url="@../../../Assets/undraw_subscriptions_re_k7jj-removebg-preview.png" />
+            <Image url="@../../../Assets/icons8-go-back-24.png" />
          </image>
       </ImageView>
    </children>
