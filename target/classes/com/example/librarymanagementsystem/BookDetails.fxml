@@ -103,7 +103,7 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="316.0" layoutY="33.0" mnemonicParsing="false" onAction="#GoToManageBook" text="Click here to edit" />
+      <Button layoutX="296.0" layoutY="133.0" mnemonicParsing="false" onAction="#GoToManageBook" prefHeight="37.0" prefWidth="106.0" text="Click here to edit" />
    </children>
    <cursor>
       <Cursor fx:constant="DEFAULT" />

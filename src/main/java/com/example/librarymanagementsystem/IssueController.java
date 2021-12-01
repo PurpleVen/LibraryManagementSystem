@@ -40,7 +40,7 @@ public  class IssueController extends NullPointerException {
         DatabaseConnector connectnow = new DatabaseConnector();
         Connection connectdb = connectnow.getConnection();
         PreparedStatement psinsert = null;
-        PreparedStatement pscheck = null;
+        PreparedStatement ptotal, pfull, pscheck = null;
         ResultSet resultSet = null;
 
         try {
@@ -70,6 +70,8 @@ public  class IssueController extends NullPointerException {
         }
 
     }
+
+
 
 
 

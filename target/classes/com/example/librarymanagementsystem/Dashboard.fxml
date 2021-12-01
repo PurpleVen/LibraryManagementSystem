@@ -91,10 +91,10 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="291.0" layoutY="78.0" mnemonicParsing="false" prefHeight="120.0" prefWidth="202.0" style="-fx-background-color: #6C63FF; -fx-background-radius: 1em;" />
-          <Label layoutX="303.0" layoutY="125.0" prefHeight="63.0" prefWidth="92.0" textFill="WHITE">
+      <Button layoutX="291.0" layoutY="76.0" mnemonicParsing="false" onAction="#ToatlBooks" prefHeight="120.0" prefWidth="202.0" style="-fx-background-color: #6C63FF; -fx-background-radius: 1em;" />
+          <Label fx:id="TotalBookCount" layoutX="303.0" layoutY="124.0" prefHeight="63.0" prefWidth="92.0" textFill="WHITE">
               <font>
-                  <Font name="System Bold" size="11.0" />
+                  <Font name="System Bold" size="30.0" />
               </font>
           </Label>
           <Label layoutX="303.0" layoutY="86.0" prefHeight="17.0" prefWidth="161.0" text="Total Books" textFill="WHITE">
@@ -113,13 +113,13 @@
                   <Font name="System Bold" size="24.0" />
               </font>
           </Label>
-      <Button layoutX="726.0" layoutY="76.0" mnemonicParsing="false" prefHeight="120.0" prefWidth="202.0" style="-fx-background-color: #544FA5; -fx-background-radius: 1em;" />
-          <Label layoutX="747.0" layoutY="89.0" prefHeight="17.0" prefWidth="161.0" text="Total Authors" textFill="WHITE">
+      <Button layoutX="726.0" layoutY="76.0" mnemonicParsing="false" onAction="#ToatlIssuedBook" prefHeight="120.0" prefWidth="202.0" style="-fx-background-color: #544FA5; -fx-background-radius: 1em;" />
+          <Label layoutX="747.0" layoutY="89.0" prefHeight="17.0" prefWidth="161.0" text="Total Issued" textFill="WHITE">
               <font>
                   <Font name="System Bold" size="24.0" />
               </font>
           </Label>
-          <Label fx:id="AuthorCount" layoutX="739.0" layoutY="124.0" prefHeight="63.0" prefWidth="92.0" textFill="WHITE">
+          <Label fx:id="IssuedBookCount" layoutX="739.0" layoutY="124.0" prefHeight="63.0" prefWidth="92.0" textFill="WHITE">
               <font>
                   <Font name="System Bold" size="30.0" />
               </font>

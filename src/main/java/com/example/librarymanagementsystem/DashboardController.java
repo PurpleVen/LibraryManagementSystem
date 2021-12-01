@@ -16,11 +16,15 @@ import java.sql.SQLException;
 
 public class DashboardController {
 
-   /* @FXML
-    private Label BookCount;
+
 
     @FXML
-    protected void Refresh(ActionEvent e){
+    private Label IssuedBookCount;
+    @FXML
+    private  Label TotalBookCount;
+
+    @FXML
+    protected void ToatlIssuedBook(ActionEvent e){
 
 
         DatabaseConnector connectnow = new DatabaseConnector();
@@ -29,15 +33,41 @@ public class DashboardController {
         PreparedStatement preparedStatement = null;
 
         try {
-            preparedStatement = "select count(*) from addbook";
-            resultSet = connectdb.createStatement().executeQuery(preparedStatement);
-            BookCount.setText(resultSet.getString(1));
+            preparedStatement = connectdb.prepareStatement("select count(*) as BookID from issuebook");
+            resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()){
+                int d = resultSet.getInt("BookID");
+                IssuedBookCount.setText(String.valueOf(d));
+            }
 
         }catch (
                 SQLException pr) {
             pr.printStackTrace();
         }
-    }*/
+    }
+
+    @FXML
+    protected void ToatlBooks(ActionEvent e){
+
+
+        DatabaseConnector connectnow = new DatabaseConnector();
+        Connection connectdb = connectnow.getConnection();
+        ResultSet resultSet = null;
+        PreparedStatement preparedStatement = null;
+
+        try {
+            preparedStatement = connectdb.prepareStatement("select count(*) as BookID from addbook");
+            resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()){
+                int d = resultSet.getInt("BookID");
+                TotalBookCount.setText(String.valueOf(d));
+            }
+
+        }catch (
+                SQLException pr) {
+            pr.printStackTrace();
+        }
+    }
 
     @FXML
     protected void IssueBook(ActionEvent e){
