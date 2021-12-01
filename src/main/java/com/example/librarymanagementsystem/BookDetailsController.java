@@ -124,6 +124,21 @@ public class BookDetailsController implements Initializable {
         }}
 
     @FXML
+    protected void GoToManageDetailsBook(ActionEvent e) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("BookDetails.fxml"));
+            ((Node) (e.getSource())).getScene().getWindow().hide();
+            Parent root1 = fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setResizable(false);
+            stage.setScene(new Scene(root1));
+            stage.show();
+        } catch (Exception ep) {
+            ep.printStackTrace();
+        }
+    }
+
+    @FXML
     protected void GoToAddMember(ActionEvent e){
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MemberAdd.fxml"));
@@ -139,9 +154,9 @@ public class BookDetailsController implements Initializable {
     }
 
     @FXML
-    protected void GoToManageMember(ActionEvent e){
+    protected void GoToManageMemberDetails(ActionEvent e){
         try{
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MemberManage.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MemberDetails.fxml"));
             ((Node)(e.getSource())).getScene().getWindow().hide();
             Parent root1 = fxmlLoader.load();
             Stage stage = new Stage();

@@ -71,50 +71,6 @@ public  class IssueController extends NullPointerException {
 
     }
 
-    public class IssueBookDetailsController implements Initializable {
-        /* @FXML
-    private Label IssueBookLabel;*/
-        @FXML
-        private TableView<IssueDetailsInfo> table1;
-        @FXML
-        private TableColumn<IssueDetailsInfo, Integer> bookid;
-        @FXML
-        private TableColumn<IssueDetailsInfo, Integer> memberid;
-        @FXML
-        private TableColumn<IssueDetailsInfo, java.util.Date> issuedate;
-        @FXML
-        private TableColumn<IssueDetailsInfo, Date> returndate;
-
-        final ObservableList<IssueDetailsInfo> listview1 = FXCollections.observableArrayList();
-
-        @Override
-        public void initialize(URL url, ResourceBundle rb) {
-            bookid.setCellValueFactory(new PropertyValueFactory<>("BookID"));
-            memberid.setCellValueFactory(new PropertyValueFactory<>("MemberID"));
-            issuedate.setCellValueFactory(new PropertyValueFactory<>("IssueDate"));
-            returndate.setCellValueFactory(new PropertyValueFactory<>("ReturnDate"));
-            try {
-                DatabaseConnector connectnow = new DatabaseConnector();
-                Connection connectdb = connectnow.getConnection();
-
-                String sql = "select *  from issuebook";
-                Statement s1 = connectdb.createStatement();
-                ResultSet resultSet = s1.executeQuery(sql);
-
-                while (resultSet.next()) {
-                    listview1.add(new IssueDetailsInfo(resultSet.getInt("BookID"),
-                            resultSet.getInt("MemberID"),
-                            resultSet.getDate("IssueDate"),
-                            resultSet.getDate("ReturnDate")));
-                }
-                table1.setItems(listview1);
-
-            } catch (Exception ep) {
-                ep.printStackTrace();
-
-            }
-        }
-
 
         @FXML
         protected void GoToDashboard(ActionEvent e) {
@@ -177,9 +133,9 @@ public  class IssueController extends NullPointerException {
         }
 
         @FXML
-        protected void GoToManageMember(ActionEvent e) {
+        protected void GoToManageMemberDetails(ActionEvent e) {
             try {
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MemberManage.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MemberDetails.fxml"));
                 ((Node) (e.getSource())).getScene().getWindow().hide();
                 Parent root1 = fxmlLoader.load();
                 Stage stage = new Stage();
@@ -207,7 +163,7 @@ public  class IssueController extends NullPointerException {
         }
 
     }
-}
+
 
 
 

@@ -7,44 +7,35 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.time.LocalDate;
 
-public class AddBookController extends NullPointerException{
-
-    @FXML
-    private Label AddBookLabel;
-    @FXML
-    private TextField Booktitle;
-    @FXML
-    private TextField Bookid;
-    @FXML
-    private TextField isbn;
-    @FXML
-    private TextField author;
-    @FXML
-    private TextField genre;
-    @FXML
-    private TextField noofcopies;
+public class AddMemberController extends NullPointerException{
 
     @FXML
-    protected void AddButton()
+    private Label AddMemberLabel;
+    @FXML
+    private TextField name;
+    @FXML
+    private TextField mem_id;
+    @FXML
+    private TextField e_id;
+    @FXML
+    private TextField phoneno;
+
+    @FXML
+    protected void AddMemberButton()
     {
-        String Title= Booktitle.getText();
-        String BookId= Bookid.getText();
-        String BookISBN = isbn.getText();
-        String Author = author.getText();
-        String Genre = genre.getText();
-        String NoOfCopies = noofcopies.getText();
+        String Name = name.getText();
+        String MemberID = mem_id.getText();
+        String EmailID = e_id.getText();
+        String PhoneNo = phoneno.getText();
         DatabaseConnector connectnow = new DatabaseConnector();
         Connection connectdb = connectnow.getConnection();
         PreparedStatement psinsert=null;
@@ -53,31 +44,27 @@ public class AddBookController extends NullPointerException{
 
         try
         {
-            pscheck=connectdb.prepareStatement("select * from addbook where BookID= ?");
-            pscheck.setString(1,BookId);
+            pscheck=connectdb.prepareStatement("select * from membermanage where MemberID= ?");
+            pscheck.setString(1,MemberID);
             resultSet=pscheck.executeQuery();
             if(resultSet.isBeforeFirst())
             {
-                System.out.println("There Exists Already A Book With The Given ID");
+                System.out.println("There Exists Already A Member With The Given ID");
                 Alert alert=new Alert(Alert.AlertType.ERROR);
-                alert.setContentText("BookID Already Exists");
+                alert.setContentText("MemberID Already Exists");
                 alert.show();
             }
             else
             {
 
-                psinsert = connectdb.prepareStatement("insert into addbook VALUES (?,?,?,?,?,?)");
-                psinsert.setString(1, Title);
-                psinsert.setString(2, BookId);
-                psinsert.setString(3, BookISBN);
-                psinsert.setString(4, Author);
-                psinsert.setString(5, Genre);
-                psinsert.setString(6, NoOfCopies);
+                psinsert = connectdb.prepareStatement("insert into membermanage VALUES (?,?,?,?)");
+                psinsert.setString(1, Name);
+                psinsert.setString(2, MemberID);
+                psinsert.setString(3, EmailID);
+                psinsert.setString(4, PhoneNo);
                 psinsert.executeUpdate();
 
-                AddBookLabel.setText("Book Added Successfully!");
-
-
+                AddMemberLabel.setText("Member Added Successfully!");
 
             }
         }catch(SQLException ep)
@@ -86,10 +73,6 @@ public class AddBookController extends NullPointerException{
         }
 
     }
-
-
-
-
 
     @FXML
     protected void GoToDashboard(ActionEvent e)
@@ -137,9 +120,9 @@ public class AddBookController extends NullPointerException{
     }
 
     @FXML
-    protected void GoToAddMember(ActionEvent e){
+    protected void GoToAddBook(ActionEvent e){
         try{
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MemberAdd.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AddBook.fxml"));
             ((Node)(e.getSource())).getScene().getWindow().hide();
             Parent root1 = fxmlLoader.load();
             Stage stage = new Stage();
@@ -180,6 +163,5 @@ public class AddBookController extends NullPointerException{
             ep.printStackTrace();
         }
     }
-
 
 }

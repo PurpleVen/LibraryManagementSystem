@@ -1,4 +1,4 @@
-/*package com.example.librarymanagementsystem;
+package com.example.librarymanagementsystem;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -16,66 +16,54 @@ import javafx.stage.Stage;
 
 import java.net.URL;
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.Date;
 import java.util.ResourceBundle;
 
-public class DuedateDetailsController implements Initializable {
-
+public class MemberDetailsController implements Initializable{
     /* @FXML
-     private Label IssueBookLabel;*/
-  /*  @FXML
-    private TableView<DuedateDetailsInfo> table;
+private Label IssueBookLabel;*/
     @FXML
-    private TableColumn<DuedateDetailsInfo, String> memberid;
+    private TableView<MemberDetailsinfo> table;
     @FXML
-    private TableColumn<DuedateDetailsInfo, String> membername;
+    private TableColumn<MemberDetailsinfo, String> name;
     @FXML
-    private TableColumn<DuedateDetailsInfo, String> bookname;
+    private TableColumn<MemberDetailsinfo, String> memberid;
     @FXML
-    private TableColumn<DuedateDetailsInfo, Date> duedate;
+    private TableColumn<MemberDetailsinfo, String> emailid;
     @FXML
-    private TableColumn<DuedateDetailsInfo, Double> fine;
+    private TableColumn<MemberDetailsinfo, String> phoneno;
 
-    final ObservableList<DuedateDetailsInfo> listview = FXCollections.observableArrayList();
+    final ObservableList<MemberDetailsinfo> listview1 = FXCollections.observableArrayList();
     @Override
     public void initialize(URL url, ResourceBundle rb){
-        memberid.setCellValueFactory(new PropertyValueFactory<>("BookID"));
-        membername.setCellValueFactory(new PropertyValueFactory<>("title"));
-        bookname.setCellValueFactory(new PropertyValueFactory<>("BookISBN"));
-        duedate.setCellValueFactory(new PropertyValueFactory<>("author"));
-        fine.setCellValueFactory(new PropertyValueFactory<>("genre"));
+        name.setCellValueFactory(new PropertyValueFactory<>("Name"));
+        memberid.setCellValueFactory(new PropertyValueFactory<>("MemberID"));
+        emailid.setCellValueFactory(new PropertyValueFactory<>("EmailID"));
+        phoneno.setCellValueFactory(new PropertyValueFactory<>("PhoneNo"));
         try{
             DatabaseConnector connectnow = new DatabaseConnector();
             Connection connectdb = connectnow.getConnection();
 
-            String sql = "select *  from addbook";
+            String sql = "select *  from membermanage";
             Statement s = connectdb.createStatement();
             ResultSet resultSet = s.executeQuery(sql);
 
             while (resultSet.next()){
-                listview.add(new BookDetailsinfo(resultSet.getString("BookID"),
-                        resultSet.getString("Title"),
-                        resultSet.getString("BookISBN"),
-                        resultSet.getString("Author"),
-                        resultSet.getString("Genre"),
-                        resultSet.getInt("NoOfCopies")));
+                listview1.add(new MemberDetailsinfo(resultSet.getString("Name"),
+                        resultSet.getString("MemberID"),
+                        resultSet.getString("EmailID"),
+                        resultSet.getString("PhoneNo")));
             }
-            table.setItems(listview);
+            table.setItems(listview1);
 
         }
-        catch (Exception e){
-            e.printStackTrace();
+        catch (Exception ep){
+            ep.printStackTrace();
 
         }
     }
-
-
-
-
-
-
     @FXML
     protected void GoToDashboard(ActionEvent e)
 
@@ -139,9 +127,24 @@ public class DuedateDetailsController implements Initializable {
     }
 
     @FXML
-    protected void GoToManageMember(ActionEvent e){
+    protected void GoToManageBook(ActionEvent e){
         try{
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MemberManage.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("BookDetails.fxml"));
+            ((Node)(e.getSource())).getScene().getWindow().hide();
+            Parent root1 = fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setResizable(false);
+            stage.setScene(new Scene(root1));
+            stage.show();
+        } catch (Exception ep){
+            ep.printStackTrace();
+        }
+    }
+
+    @FXML
+    protected void GoToManageMemberDetails(ActionEvent e){
+        try{
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MemberDetails.fxml"));
             ((Node)(e.getSource())).getScene().getWindow().hide();
             Parent root1 = fxmlLoader.load();
             Stage stage = new Stage();
@@ -168,6 +171,5 @@ public class DuedateDetailsController implements Initializable {
         }
     }
 
-}
 
-*/
+}

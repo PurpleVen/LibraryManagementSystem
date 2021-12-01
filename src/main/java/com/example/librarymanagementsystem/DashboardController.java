@@ -100,7 +100,7 @@ public class DashboardController {
     }
 
     @FXML
-    protected void ManageMember(ActionEvent e){
+    protected void ManageMemberDetails(ActionEvent e){
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MemberDetails.fxml"));
             ((Node)(e.getSource())).getScene().getWindow().hide();

@@ -30,35 +30,11 @@
                         <Font name="Arial Rounded MT Bold" size="20.0" />
                     </font>
                 </Label>
-                <Button layoutX="14.0" layoutY="264.0" mnemonicParsing="false" onAction="#AddBook" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Add" textFill="WHITE">
-                    <font>
-                        <Font size="18.0" />
-                    </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-                </Button>
-                <Button layoutX="12.0" layoutY="303.0" mnemonicParsing="false" onAction="#ManageDetailsBook" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Manage" textFill="WHITE">
-                    <font>
-                        <Font size="18.0" />
-                    </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-                </Button>
                 <Label layoutX="12.0" layoutY="356.0" prefHeight="21.0" prefWidth="115.0" text="Members" textFill="#fcfcfc">
                     <font>
                         <Font name="Arial Rounded MT Bold" size="20.0" />
                     </font>
                 </Label>
-                <Button layoutX="12.0" layoutY="386.0" mnemonicParsing="false" onAction="#AddMember" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Add" textFill="WHITE">
-                    <font>
-                        <Font size="18.0" />
-                    </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-                </Button>
                 <Button layoutX="12.0" layoutY="487.0" mnemonicParsing="false" onAction="#GoBackToLogin" prefHeight="38.0" prefWidth="77.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="LOG OUT" textFill="WHITE">
                     <cursor>
                         <Cursor fx:constant="HAND" />
@@ -68,22 +44,6 @@
                   <Image url="@../../../Assets/book-stack.png" />
                </image>
             </ImageView>
-            <Button layoutX="13.0" layoutY="426.0" mnemonicParsing="false" onAction="#ManageMember" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Manage" textFill="WHITE">
-               <font>
-                  <Font size="18.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Button layoutX="14.0" layoutY="223.0" mnemonicParsing="false" onAction="#IssueBook" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Issue" textFill="WHITE">
-               <font>
-                  <Font size="18.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
             </children>
         </AnchorPane>
         <Pane layoutX="507.0" layoutY="78.0" prefHeight="120.0" prefWidth="202.0" style="-fx-background-color: #3F3D56; -fx-background-radius: 1em;">
@@ -146,6 +106,31 @@
             <Image url="@../../../Assets/alert-removebg-preview.png" />
          </image>
       </ImageView>
+      <Button layoutX="13.0" layoutY="217.0" mnemonicParsing="false" onAction="#IssueBook" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428;" text="Issue" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="13.0" layoutY="264.0" mnemonicParsing="false" onAction="#AddBook" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428;" text="Add" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="14.0" layoutY="307.0" mnemonicParsing="false" onAction="#ManageDetailsBook" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428;" text="Manage" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="13.0" layoutY="387.0" mnemonicParsing="false" onAction="#AddMember" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428;" text="Add" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="12.0" layoutY="428.0" mnemonicParsing="false" onAction="#ManageMemberDetails" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428;" text="Manage" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
     </children>
     <cursor>
         <Cursor fx:constant="DEFAULT" />
