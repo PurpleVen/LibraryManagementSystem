@@ -232,7 +232,7 @@ public  class HelloController extends NullPointerException  {
             validatelogin(e);
 
         } else {
-            LoginMessage.setText("Invalid Username Or Password");
+            LoginMessage.setText("Please Enter Username And Password");
         }
     }
 
