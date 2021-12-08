@@ -13,6 +13,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import org.w3c.dom.events.MouseEvent;
 
 import java.net.URL;
 import java.sql.Connection;
@@ -35,6 +36,7 @@ private Label IssueBookLabel;*/
     @FXML
     private TableColumn<MemberDetailsinfo, String> phoneno;
 
+
     final ObservableList<MemberDetailsinfo> listview1 = FXCollections.observableArrayList();
     @Override
     public void initialize(URL url, ResourceBundle rb){
@@ -42,6 +44,7 @@ private Label IssueBookLabel;*/
         memberid.setCellValueFactory(new PropertyValueFactory<>("MemberID"));
         emailid.setCellValueFactory(new PropertyValueFactory<>("EmailID"));
         phoneno.setCellValueFactory(new PropertyValueFactory<>("PhoneNo"));
+        table.setEditable(true);
         try{
             DatabaseConnector connectnow = new DatabaseConnector();
             Connection connectdb = connectnow.getConnection();
@@ -64,6 +67,7 @@ private Label IssueBookLabel;*/
 
         }
     }
+    
     @FXML
     protected void GoToDashboard(ActionEvent e)
 
