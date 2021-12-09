@@ -31,6 +31,56 @@ public  class IssueController extends NullPointerException {
     @FXML
     private DatePicker Returndate;
 
+    private boolean validatebookid(){
+        if (Bookid.getText().length()>0){
+            return true;
+        }else{
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Validate Book ID");
+            alert.setHeaderText(null);
+            alert.setContentText("Please Enter Book ID!");
+            alert.showAndWait();
+            return false;
+        }
+    }
+    private boolean validatememberid(){
+        if (Memberid.getText().length()>0){
+            return true;
+        }else{
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Validate member ID");
+            alert.setHeaderText(null);
+            alert.setContentText("Please Enter Member ID!");
+            alert.showAndWait();
+            return false;
+        }
+    }
+    /*private boolean validateIssueDate(){
+        if (Issuedate.toString().length()>0){
+            return true;
+        }else{
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Validate Issue Date");
+            alert.setHeaderText(null);
+            alert.setContentText("Please Enter Issue Date!");
+            alert.showAndWait();
+            return false;
+        }
+    }
+    private boolean validateReturnDate(){
+        if (Returndate.toString().length()>0){
+            return true;
+        }else{
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Validate Return Date");
+            alert.setHeaderText(null);
+            alert.setContentText("Please Enter Return Date!");
+            alert.showAndWait();
+            return false;
+        }
+    }*/
+
+
     @FXML
     protected void IssueButton() {
         String BookID = Bookid.getText();
@@ -43,37 +93,40 @@ public  class IssueController extends NullPointerException {
         PreparedStatement ptotal, pfull, pscheck = null;
         ResultSet resultSet = null;
 
-        try {
-            pscheck = connectdb.prepareStatement("select * from issuebook where BookID= ?");
-            pscheck.setString(1, BookID);
-            resultSet = pscheck.executeQuery();
-            if (resultSet.isBeforeFirst()) {
-                System.out.println("This Book Doesn't Exist...");
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setContentText("NO.");
-                alert.show();
-            } else {
+        if (Bookid.getText().isBlank() && Memberid.getText().isBlank()) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Validate Issue Details");
+            alert.setHeaderText(null);
+            alert.setContentText("LOL common sense");
+            alert.showAndWait();
+        } else if (validatebookid() && validatememberid()) {
 
-                psinsert = connectdb.prepareStatement("insert into issuebook VALUES (?,?,?,?)");
-                psinsert.setString(1, BookID);
-                psinsert.setString(2, MemberID);
-                psinsert.setString(3, IssueDate.toString());
-                psinsert.setString(4, ReturnDate.toString());
-                psinsert.executeUpdate();
+            try {
+                pscheck = connectdb.prepareStatement("select * from issuebook where BookID= ?");
+                pscheck.setString(1, BookID);
+                resultSet = pscheck.executeQuery();
+                if (resultSet.isBeforeFirst()) {
+                    System.out.println("This Book Is Already Issued");
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setContentText("This Book Is Already Issued");
+                    alert.show();
+                } else {
 
-                IssueBookLabel.setText("Book Issued Successfully!");
+                    psinsert = connectdb.prepareStatement("insert into issuebook VALUES (?,?,?,?)");
+                    psinsert.setString(1, BookID);
+                    psinsert.setString(2, MemberID);
+                    psinsert.setString(3, IssueDate.toString());
+                    psinsert.setString(4, ReturnDate.toString());
+                    psinsert.executeUpdate();
 
-
+                    IssueBookLabel.setText("Book Issued Successfully!");
+                }
+            } catch (SQLException ep) {
+                ep.printStackTrace();
             }
-        } catch (SQLException ep) {
-            ep.printStackTrace();
+
         }
-
     }
-
-
-
-
 
         @FXML
         protected void GoToDashboard(ActionEvent e) {

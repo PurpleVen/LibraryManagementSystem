@@ -58,10 +58,10 @@
          <content>
             <TableView fx:id="table" prefHeight="344.0" prefWidth="666.0" style="-fx-border-color: linear-gradient(to left bottom, #a617ff, #9731fc, #893ff8, #7c49f3, #7051ed, #5a62f3, #4471f6, #2f7df6, #0093fd, #00a8fe, #2cbafd, #5bcbfa);">
                <columns>
-                  <TableColumn fx:id="name" prefWidth="162.22220361232758" text="Name" />
-                  <TableColumn fx:id="memberid" prefWidth="82.4000244140625" text="Member ID" />
-                  <TableColumn fx:id="emailid" prefWidth="214.3999786376953" text="Email ID" />
-                  <TableColumn fx:id="phoneno" prefWidth="195.9998779296875" text="Phone no" />
+                  <TableColumn fx:id="name" editable="false" prefWidth="162.22220361232758" resizable="false" sortable="false" text="Name" />
+                  <TableColumn fx:id="memberid" editable="false" prefWidth="82.4000244140625" resizable="false" sortable="false" text="Member ID" />
+                  <TableColumn fx:id="emailid" editable="false" prefWidth="214.3999786376953" resizable="false" sortable="false" text="Email ID" />
+                  <TableColumn fx:id="phoneno" editable="false" prefWidth="195.9998779296875" resizable="false" sortable="false" text="Phone no" />
                </columns>
             </TableView>
          </content>

@@ -9,6 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -35,6 +36,8 @@ private Label IssueBookLabel;*/
     private TableColumn<MemberDetailsinfo, String> emailid;
     @FXML
     private TableColumn<MemberDetailsinfo, String> phoneno;
+    @FXML
+    private Label AddMemberLabel;
 
 
     final ObservableList<MemberDetailsinfo> listview1 = FXCollections.observableArrayList();
@@ -51,6 +54,7 @@ private Label IssueBookLabel;*/
 
             String sql = "select *  from membermanage";
             Statement s = connectdb.createStatement();
+
             ResultSet resultSet = s.executeQuery(sql);
 
             while (resultSet.next()){
@@ -67,7 +71,7 @@ private Label IssueBookLabel;*/
 
         }
     }
-    
+
     @FXML
     protected void GoToDashboard(ActionEvent e)
 

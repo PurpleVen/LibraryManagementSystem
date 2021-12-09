@@ -166,7 +166,6 @@ public  class HelloController extends NullPointerException  {
 
         if (!Username.getText().isBlank() && !Password.getText().isBlank() ){
             validatelogin(e);
-
         } else {
             LoginMessage.setText("Please Enter Username And Password");
         }

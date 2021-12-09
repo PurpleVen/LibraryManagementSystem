@@ -58,7 +58,9 @@ public class ManageMemberController {
         Statement statement;
         try{
             statement = connectdb.createStatement();
+
             statement.executeUpdate(query);
+
         }catch (Exception ex){
             ex.printStackTrace();
         }

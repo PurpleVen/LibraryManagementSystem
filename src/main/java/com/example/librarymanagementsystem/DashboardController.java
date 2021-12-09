@@ -16,12 +16,12 @@ import java.sql.SQLException;
 
 public class DashboardController {
 
-
-
     @FXML
     private Label IssuedBookCount;
     @FXML
     private  Label TotalBookCount;
+    @FXML
+    private  Label MemberCount;
 
     @FXML
     protected void ToatlIssuedBook(ActionEvent e){
@@ -40,8 +40,29 @@ public class DashboardController {
                 IssuedBookCount.setText(String.valueOf(d));
             }
 
-        }catch (
-                SQLException pr) {
+        }catch (SQLException pr) {
+            pr.printStackTrace();
+        }
+    }
+
+    @FXML
+    protected void TotalMembers(ActionEvent e){
+
+
+        DatabaseConnector connectnow = new DatabaseConnector();
+        Connection connectdb = connectnow.getConnection();
+        ResultSet resultSet = null;
+        PreparedStatement preparedStatement = null;
+
+        try {
+            preparedStatement = connectdb.prepareStatement("select count(*) as MemberID from membermanage");
+            resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()){
+                int d = resultSet.getInt("MemberID");
+                MemberCount.setText(String.valueOf(d));
+            }
+
+        }catch (SQLException pr) {
             pr.printStackTrace();
         }
     }
@@ -188,7 +209,5 @@ public class DashboardController {
             ep.printStackTrace();
         }
     }
-
-
 
 }
