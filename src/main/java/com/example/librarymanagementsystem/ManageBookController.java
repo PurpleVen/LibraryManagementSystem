@@ -37,6 +37,8 @@ public class ManageBookController {
     private TextField quantity;
     @FXML
     private Label StatusLabel;
+    @FXML
+    private  Button Search;
 
 
 
@@ -47,6 +49,27 @@ public class ManageBookController {
         else if (event.getSource() == DeleteButton){
             DeleteBookDetails();
 
+        }
+
+    }
+
+    @FXML
+    private void Search(ActionEvent event){
+        DatabaseConnector connection = new DatabaseConnector();
+        Connection connectDB = connection.getConnection();
+        String getename = "SELECT * FROM addbook where BookID=" +id.getText();
+        try {
+            Statement statement = connectDB.createStatement();
+            ResultSet resultSet = statement.executeQuery(getename);
+            while (resultSet.next()) {
+                title.setText(resultSet.getString("Title"));
+                isbn.setText(resultSet.getString("BookISBN"));
+                author.setText(resultSet.getString("Author"));
+                genre.setText(resultSet.getString("Genre"));
+                quantity.setText(resultSet.getString("NoOfCopies"));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
     }

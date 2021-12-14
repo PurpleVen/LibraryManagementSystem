@@ -102,28 +102,48 @@ public  class IssueController extends NullPointerException {
         } else if (validatebookid() && validatememberid()) {
 
             try {
-                pscheck = connectdb.prepareStatement("select * from issuebook where BookID= ?");
+                pscheck = connectdb.prepareStatement("select addbook.BookID, membermanage.MemberID from addbook, membermanage where addbook.BookID = ? and membermanage.MemberID = ?");
                 pscheck.setString(1, BookID);
+                pscheck.setString(2, MemberID);
                 resultSet = pscheck.executeQuery();
-                if (resultSet.isBeforeFirst()) {
-                    System.out.println("This Book Is Already Issued");
+                if(resultSet.isBeforeFirst()) {
+                    PreparedStatement pbook = connectdb.prepareStatement("select * from issuebook where BookID =?");
+                    pbook.setString(1, BookID);
+                    ResultSet rs = pbook.executeQuery();
+
+                    if (rs.isBeforeFirst()) {
+                        System.out.println("This Book is already issued");
+                        Alert alert = new Alert(Alert.AlertType.ERROR);
+                        alert.setContentText("This Book is already issued");
+                        alert.show();
+                    }
+                    else{
+                        psinsert = connectdb.prepareStatement("insert into issuebook VALUES (?,?,?,?)");
+                        psinsert.setString(1, BookID);
+                        psinsert.setString(2, MemberID);
+                        psinsert.setString(3, IssueDate.toString());
+                        psinsert.setString(4, ReturnDate.toString());
+                        psinsert.executeUpdate();
+
+                        IssueBookLabel.setText("Book Issued Successfully!");
+                        Bookid.clear();
+                        Memberid.clear();
+                        Issuedate.getEditor().clear();
+                        Returndate.getEditor().clear();
+                    }
+                }
+
+
+                    else {
+                    System.out.println("This Book/Member Does Not Exist");
                     Alert alert = new Alert(Alert.AlertType.ERROR);
-                    alert.setContentText("This Book Is Already Issued");
+                    alert.setContentText("This Book/Member Does Not Exist");
                     alert.show();
-                } else {
-
-                    psinsert = connectdb.prepareStatement("insert into issuebook VALUES (?,?,?,?)");
-                    psinsert.setString(1, BookID);
-                    psinsert.setString(2, MemberID);
-                    psinsert.setString(3, IssueDate.toString());
-                    psinsert.setString(4, ReturnDate.toString());
-                    psinsert.executeUpdate();
-
-                    IssueBookLabel.setText("Book Issued Successfully!");
                 }
             } catch (SQLException ep) {
                 ep.printStackTrace();
             }
+
 
         }
     }

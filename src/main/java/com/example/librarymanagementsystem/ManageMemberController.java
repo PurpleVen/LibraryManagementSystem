@@ -12,6 +12,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class ManageMemberController {
@@ -40,6 +41,25 @@ public class ManageMemberController {
         else if (event.getSource() == DeleteMemberButton){
             DeleteMemberDetails();
 
+        }
+
+    }
+
+    @FXML
+    private void SearchMember(ActionEvent event){
+        DatabaseConnector connection = new DatabaseConnector();
+        Connection connectDB = connection.getConnection();
+        String getename = "SELECT * FROM membermanage where MemberID=" +member_id.getText();
+        try {
+            Statement statement = connectDB.createStatement();
+            ResultSet resultSet = statement.executeQuery(getename);
+            while (resultSet.next()) {
+                name.setText(resultSet.getString("Name"));
+                email.setText(resultSet.getString("EmailID"));
+                phone_no.setText(resultSet.getString("PhoneNo"));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
     }

@@ -111,9 +111,9 @@
             <TableView fx:id="table" layoutX="285.0" layoutY="168.0" prefHeight="350.0" prefWidth="662.0">
                <columns>
                   <TableColumn fx:id="memberid" prefWidth="76.66665649414062" text="Member ID" />
-                  <TableColumn fx:id="membername" prefWidth="190.0" text="Member Name" />
-                  <TableColumn fx:id="bookname" minWidth="0.0" prefWidth="244.0" text="Book Name " />
-                  <TableColumn fx:id="duedate" prefWidth="84.6666259765625" text="Due Date" />
+                  <TableColumn fx:id="membername" prefWidth="204.79998779296875" text="Member Name" />
+                  <TableColumn fx:id="bookid" minWidth="0.0" prefWidth="129.60003662109375" text="Book ID" />
+                  <TableColumn fx:id="duedate" prefWidth="185.5999755859375" text="Due Date" />
                   <TableColumn fx:id="fine" prefWidth="66.6666259765625" text="Fine (Rs)" />
                </columns>
             </TableView>

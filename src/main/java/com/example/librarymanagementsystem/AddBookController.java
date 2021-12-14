@@ -314,7 +314,7 @@ public class AddBookController extends NullPointerException{
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Validate add book");
             alert.setHeaderText(null);
-            alert.setContentText("Come on Yaar");
+            alert.setContentText("Please Enter Details!");
             alert.showAndWait();
         }
         else if (validatebooktitle()&&validatebookid()&&validateisbn()&&validateauthor()&&validategenre()&&validatenoofcopies()){
@@ -343,6 +343,12 @@ public class AddBookController extends NullPointerException{
                     psinsert.executeUpdate();
 
                     AddBookLabel.setText("Book Added Successfully!");
+                    Booktitle.clear();
+                    Bookid.clear();
+                    isbn.clear();
+                    author.clear();
+                    genre.clear();
+                    noofcopies.clear();
 
 
 

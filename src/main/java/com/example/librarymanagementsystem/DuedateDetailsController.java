@@ -1,4 +1,4 @@
-/*package com.example.librarymanagementsystem;
+package com.example.librarymanagementsystem;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -23,16 +23,15 @@ import java.util.ResourceBundle;
 
 public class DuedateDetailsController implements Initializable {
 
-    /* @FXML
-     private Label IssueBookLabel;*/
-  /*  @FXML
+
+    @FXML
     private TableView<DuedateDetailsInfo> table;
     @FXML
     private TableColumn<DuedateDetailsInfo, String> memberid;
     @FXML
     private TableColumn<DuedateDetailsInfo, String> membername;
     @FXML
-    private TableColumn<DuedateDetailsInfo, String> bookname;
+    private TableColumn<DuedateDetailsInfo, String> bookid;
     @FXML
     private TableColumn<DuedateDetailsInfo, Date> duedate;
     @FXML
@@ -41,26 +40,24 @@ public class DuedateDetailsController implements Initializable {
     final ObservableList<DuedateDetailsInfo> listview = FXCollections.observableArrayList();
     @Override
     public void initialize(URL url, ResourceBundle rb){
-        memberid.setCellValueFactory(new PropertyValueFactory<>("BookID"));
-        membername.setCellValueFactory(new PropertyValueFactory<>("title"));
-        bookname.setCellValueFactory(new PropertyValueFactory<>("BookISBN"));
-        duedate.setCellValueFactory(new PropertyValueFactory<>("author"));
-        fine.setCellValueFactory(new PropertyValueFactory<>("genre"));
+        memberid.setCellValueFactory(new PropertyValueFactory<>("MemberID"));
+        membername.setCellValueFactory(new PropertyValueFactory<>("Name"));
+        bookid.setCellValueFactory(new PropertyValueFactory<>("BookID"));
+        duedate.setCellValueFactory(new PropertyValueFactory<>("ReturnDate"));
+        //fine.setCellValueFactory(new PropertyValueFactory<>("g"));
         try{
             DatabaseConnector connectnow = new DatabaseConnector();
             Connection connectdb = connectnow.getConnection();
 
-            String sql = "select *  from addbook";
+            String sql = "select membermanage.Name, issuebook.BookID , issuebook.MemberID, issuebook.ReturnDate from membermanage , issuebook where membermanage.MemberID = issuebook.MemberID";
             Statement s = connectdb.createStatement();
             ResultSet resultSet = s.executeQuery(sql);
 
             while (resultSet.next()){
-                listview.add(new BookDetailsinfo(resultSet.getString("BookID"),
-                        resultSet.getString("Title"),
-                        resultSet.getString("BookISBN"),
-                        resultSet.getString("Author"),
-                        resultSet.getString("Genre"),
-                        resultSet.getInt("NoOfCopies")));
+                listview.add(new BookDetailsinfo(resultSet.getString("MemberID"),
+                        resultSet.getString("Name"),
+                        resultSet.getString("BookID"),
+                        resultSet.getDate("ReturnDate"));
             }
             table.setItems(listview);
 
@@ -170,4 +167,3 @@ public class DuedateDetailsController implements Initializable {
 
 }
 
-*/

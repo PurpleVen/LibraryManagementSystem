@@ -53,10 +53,10 @@
          <content>
             <TableView fx:id="table" prefHeight="320.0" prefWidth="662.0" style="-fx-border-color: linear-gradient(to left bottom, #a617ff, #9731fc, #893ff8, #7c49f3, #7051ed, #5a62f3, #4471f6, #2f7df6, #0093fd, #00a8fe, #2cbafd, #5bcbfa);">
                <columns>
-                  <TableColumn fx:id="bookid" prefWidth="145.59997254610062" text="Book ID" />
-                  <TableColumn fx:id="memberid" prefWidth="153.60008239746094" text="Member ID" />
-                  <TableColumn fx:id="issuedate" minWidth="0.0" prefWidth="164.0" text="Issue Date" />
-                  <TableColumn fx:id="returndate" prefWidth="196.79998779296875" text="Return Date" />
+                  <TableColumn fx:id="bookid" editable="false" prefWidth="145.59997254610062" resizable="false" sortable="false" text="Book ID" />
+                  <TableColumn fx:id="memberid" editable="false" prefWidth="153.60008239746094" resizable="false" sortable="false" text="Member ID" />
+                  <TableColumn fx:id="issuedate" editable="false" minWidth="0.0" prefWidth="164.0" resizable="false" text="Issue Date" />
+                  <TableColumn fx:id="returndate" editable="false" prefWidth="196.79998779296875" resizable="false" text="Return Date" />
                </columns>
             </TableView>
          </content>
@@ -86,7 +86,7 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="15.0" layoutY="305.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428;" text="Manage" textFill="WHITE">
+      <Button layoutX="15.0" layoutY="305.0" mnemonicParsing="false" onAction="#GoToManageBookDetails" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428;" text="Manage" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

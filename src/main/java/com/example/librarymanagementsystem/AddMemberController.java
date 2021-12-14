@@ -97,7 +97,7 @@ public class AddMemberController extends NullPointerException{
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Validate Member Details");
             alert.setHeaderText(null);
-            alert.setContentText("Come on YARRRRA");
+            alert.setContentText("Please Enter All The Details!");
             alert.showAndWait();
         }
 

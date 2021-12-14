@@ -49,6 +49,8 @@ public class IssueBookDetailsController implements Initializable {
             Statement s1 = connectdb.createStatement();
             ResultSet resultSet = s1.executeQuery(sql);
 
+
+
             while (resultSet.next()){
                 listview.add(new IssueDetailsInfo(resultSet.getInt("BookID"),
                         resultSet.getInt("MemberID"),
@@ -128,7 +130,22 @@ public class IssueBookDetailsController implements Initializable {
     @FXML
     protected void GoToManageMemberDetails(ActionEvent e){
         try{
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MemberManage.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("MemberDetails.fxml"));
+            ((Node)(e.getSource())).getScene().getWindow().hide();
+            Parent root1 = fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setResizable(false);
+            stage.setScene(new Scene(root1));
+            stage.show();
+        } catch (Exception ep){
+            ep.printStackTrace();
+        }
+    }
+
+    @FXML
+    protected void GoToManageBookDetails(ActionEvent e){
+        try{
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("BookDetails.fxml"));
             ((Node)(e.getSource())).getScene().getWindow().hide();
             Parent root1 = fxmlLoader.load();
             Stage stage = new Stage();

@@ -3,18 +3,21 @@ package com.example.librarymanagementsystem;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
+import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ResourceBundle;
 
-public class DashboardController {
+public class DashboardController implements Initializable {
 
     @FXML
     private Label IssuedBookCount;
@@ -23,7 +26,53 @@ public class DashboardController {
     @FXML
     private  Label MemberCount;
 
-    @FXML
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle){
+        DatabaseConnector connectnow = new DatabaseConnector();
+        Connection connectdb = connectnow.getConnection();
+        ResultSet resultSet = null;
+        PreparedStatement preparedStatement = null;
+
+        try {
+            preparedStatement = connectdb.prepareStatement("select count(*) as BookID from issuebook");
+            resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()){
+                int d = resultSet.getInt("BookID");
+                IssuedBookCount.setText(String.valueOf(d));
+            }
+
+        }catch (SQLException pr) {
+            pr.printStackTrace();
+        }
+
+        try {
+            preparedStatement = connectdb.prepareStatement("select count(*) as MemberID from membermanage");
+            resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()){
+                int d = resultSet.getInt("MemberID");
+                MemberCount.setText(String.valueOf(d));
+            }
+
+        }catch (SQLException pr) {
+            pr.printStackTrace();
+        }
+
+    try {
+        preparedStatement = connectdb.prepareStatement("select count(*) as BookID from addbook");
+        resultSet = preparedStatement.executeQuery();
+        while (resultSet.next()){
+            int d = resultSet.getInt("BookID");
+            TotalBookCount.setText(String.valueOf(d));
+        }
+
+    }catch (
+    SQLException pr) {
+        pr.printStackTrace();
+    }
+
+    }
+
+    /*@FXML
     protected void ToatlIssuedBook(ActionEvent e){
 
 
@@ -43,9 +92,11 @@ public class DashboardController {
         }catch (SQLException pr) {
             pr.printStackTrace();
         }
-    }
+    }*/
 
-    @FXML
+
+
+   /* @FXML
     protected void TotalMembers(ActionEvent e){
 
 
@@ -65,9 +116,9 @@ public class DashboardController {
         }catch (SQLException pr) {
             pr.printStackTrace();
         }
-    }
+    }*/
 
-    @FXML
+    /*@FXML
     protected void ToatlBooks(ActionEvent e){
 
 
@@ -88,7 +139,7 @@ public class DashboardController {
                 SQLException pr) {
             pr.printStackTrace();
         }
-    }
+    }*/
 
     @FXML
     protected void IssueBook(ActionEvent e){

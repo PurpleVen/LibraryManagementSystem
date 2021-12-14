@@ -49,24 +49,24 @@
       </AnchorPane>
       <AnchorPane layoutX="312.0" layoutY="154.0" prefHeight="350.0" prefWidth="599.0" style="-fx-background-color: #6C63FF; -fx-background-radius: 1em; -fx-border-color: black; -fx-border-radius: 1em;">
          <children>
-            <Label layoutX="25.0" layoutY="35.0" prefHeight="30.0" prefWidth="158.0" style="-fx-font-weight: bold;" text="Name :" textFill="WHITE">
+            <Label layoutX="126.0" layoutY="28.0" prefHeight="30.0" prefWidth="126.0" style="-fx-font-weight: bold;" text="Member ID :" textFill="WHITE">
                <font>
                   <Font name="Malgun Gothic" size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="name" layoutX="235.0" layoutY="37.0" prefHeight="26.0" prefWidth="334.0" promptText="Name" />
-            <Label layoutX="23.0" layoutY="81.0" prefHeight="30.0" prefWidth="166.0" style="-fx-font-weight: bold;" text="Member ID :" textFill="WHITE">
+            <TextField fx:id="member_id" layoutX="252.0" layoutY="31.0" prefHeight="26.0" prefWidth="115.0" promptText="ID" />
+            <Label layoutX="38.0" layoutY="81.0" prefHeight="30.0" prefWidth="166.0" style="-fx-font-weight: bold;" text="Name" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="member_id" layoutX="235.0" layoutY="83.0" prefHeight="26.0" prefWidth="334.0" promptText="ID" />
-            <Label layoutX="24.0" layoutY="131.0" prefHeight="30.0" prefWidth="179.0" style="-fx-font-weight: bold;" text="Email ID : " textFill="WHITE">
+            <TextField fx:id="name" layoutX="235.0" layoutY="83.0" prefHeight="26.0" prefWidth="334.0" promptText="Name" />
+            <Label layoutX="39.0" layoutY="131.0" prefHeight="30.0" prefWidth="179.0" style="-fx-font-weight: bold;" text="Email ID : " textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="24.0" layoutY="180.0" prefHeight="30.0" prefWidth="179.0" style="-fx-font-weight: bold;" text="Phone No. :" textFill="WHITE">
+            <Label layoutX="36.0" layoutY="178.0" prefHeight="30.0" prefWidth="179.0" style="-fx-font-weight: bold;" text="Phone No. :" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
@@ -78,7 +78,7 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="EditMemberButton" layoutX="106.0" layoutY="244.0" mnemonicParsing="false" onAction="#button" prefHeight="38.0" prefWidth="115.0" style="-fx-background-radius: 1em; -fx-border-color: white; -fx-border-radius: 1em;" text="EDIT">
+            <Button fx:id="EditMemberButton" layoutX="106.0" layoutY="245.0" mnemonicParsing="false" onAction="#button" prefHeight="38.0" prefWidth="115.0" style="-fx-background-radius: 1em; -fx-border-color: white; -fx-border-radius: 1em;" text="EDIT">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -88,6 +88,7 @@
                   <Font size="18.0" />
                </font>
             </Label>
+            <Button layoutX="390.0" layoutY="31.0" mnemonicParsing="false" onAction="#SearchMember" text="Search" />
          </children>
       </AnchorPane>
       <ImageView layoutX="288.0" layoutY="27.0">

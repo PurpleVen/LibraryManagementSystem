@@ -53,12 +53,12 @@
          <content>
             <TableView fx:id="table" prefHeight="322.0" prefWidth="662.0" style="-fx-border-color: linear-gradient(to left bottom, #a617ff, #9731fc, #893ff8, #7c49f3, #7051ed, #5a62f3, #4471f6, #2f7df6, #0093fd, #00a8fe, #2cbafd, #5bcbfa);">
                <columns>
-                  <TableColumn fx:id="id" prefWidth="44.00000077486038" text="ID" />
-                  <TableColumn fx:id="title" prefWidth="207.99999618530273" text="Title" />
-                  <TableColumn fx:id="isbn" minWidth="0.0" prefWidth="120.79994201660156" text="ISBN" />
-                  <TableColumn fx:id="author" prefWidth="141.60009765625" text="Author" />
-                  <TableColumn fx:id="genre" prefWidth="86.39990234375" text="Genre" />
-                  <TableColumn fx:id="quantity" prefWidth="64.0001220703125" text="Quantity" />
+                  <TableColumn fx:id="id" prefWidth="44.00000077486038" resizable="false" sortable="false" text="ID" />
+                  <TableColumn fx:id="title" prefWidth="207.99999618530273" resizable="false" sortable="false" text="Title" />
+                  <TableColumn fx:id="isbn" minWidth="0.0" prefWidth="120.79994201660156" resizable="false" sortable="false" text="ISBN" />
+                  <TableColumn fx:id="author" prefWidth="141.60009765625" resizable="false" sortable="false" text="Author" />
+                  <TableColumn fx:id="genre" prefWidth="86.39990234375" resizable="false" sortable="false" text="Genre" />
+                  <TableColumn fx:id="quantity" prefWidth="64.0001220703125" resizable="false" sortable="false" text="Quantity" />
                </columns>
             </TableView>
          </content>
