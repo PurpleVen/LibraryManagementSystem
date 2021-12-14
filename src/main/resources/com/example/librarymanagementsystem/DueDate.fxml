@@ -113,8 +113,8 @@
                   <TableColumn fx:id="memberid" prefWidth="76.66665649414062" text="Member ID" />
                   <TableColumn fx:id="membername" prefWidth="204.79998779296875" text="Member Name" />
                   <TableColumn fx:id="bookid" minWidth="0.0" prefWidth="129.60003662109375" text="Book ID" />
-                  <TableColumn fx:id="duedate" prefWidth="185.5999755859375" text="Due Date" />
-                  <TableColumn fx:id="fine" prefWidth="66.6666259765625" text="Fine (Rs)" />
+                  <TableColumn fx:id="duedate" prefWidth="172.0" text="Due Date" />
+                  <TableColumn prefWidth="80.800048828125" text="Fine (Rs)" />
                </columns>
             </TableView>
          </children>

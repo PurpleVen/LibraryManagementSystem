@@ -97,7 +97,7 @@ public  class IssueController extends NullPointerException {
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Validate Issue Details");
             alert.setHeaderText(null);
-            alert.setContentText("LOL common sense");
+            alert.setContentText("Please Enter All The Details!");
             alert.showAndWait();
         } else if (validatebookid() && validatememberid()) {
 

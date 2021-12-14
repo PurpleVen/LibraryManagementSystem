@@ -34,30 +34,30 @@ public class DuedateDetailsController implements Initializable {
     private TableColumn<DuedateDetailsInfo, String> bookid;
     @FXML
     private TableColumn<DuedateDetailsInfo, Date> duedate;
-    @FXML
-    private TableColumn<DuedateDetailsInfo, Double> fine;
+    /*@FXML
+    private TableColumn<DuedateDetailsInfo, Double> fine;*/
 
     final ObservableList<DuedateDetailsInfo> listview = FXCollections.observableArrayList();
     @Override
     public void initialize(URL url, ResourceBundle rb){
-        memberid.setCellValueFactory(new PropertyValueFactory<>("Name"));
-        membername.setCellValueFactory(new PropertyValueFactory<>("BookID"));
-        bookid.setCellValueFactory(new PropertyValueFactory<>("MemberID"));
+        memberid.setCellValueFactory(new PropertyValueFactory<>("MemberID"));
+        membername.setCellValueFactory(new PropertyValueFactory<>("Name"));
+        bookid.setCellValueFactory(new PropertyValueFactory<>("BookID"));
         duedate.setCellValueFactory(new PropertyValueFactory<>("ReturnDate"));
         //fine.setCellValueFactory(new PropertyValueFactory<>("g"));
         try{
             DatabaseConnector connectnow = new DatabaseConnector();
             Connection connectdb = connectnow.getConnection();
 
-            String sql = "select membermanage.Name, issuebook.BookID , issuebook.MemberID, issuebook.ReturnDate from membermanage , issuebook where membermanage.MemberID = issuebook.MemberID";
+            String sql = "select * from Due_Date";
             Statement s = connectdb.createStatement();
             ResultSet resultSet = s.executeQuery(sql);
 
             while (resultSet.next()){
                 listview.add(new DuedateDetailsInfo
-                        (resultSet.getString("Name"),
+                        (resultSet.getString("MemberID"),
+                        resultSet.getString("Name"),
                         resultSet.getString("BookID"),
-                        resultSet.getString("MemberID"),
                         resultSet.getDate("ReturnDate")));
             }
             table.setItems(listview);

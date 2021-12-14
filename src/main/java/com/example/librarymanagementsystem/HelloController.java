@@ -137,13 +137,16 @@ import javafx.stage.Stage;
 import javafx.scene.control.TextField;
 import javafx.scene.control.PasswordField;
 import javafx.scene.Node;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import javafx.event.ActionEvent;
 import javafx.scene.Scene;
+import java.net.URL;
 
 import java.sql.*;
+import java.util.ResourceBundle;
 
 public  class HelloController extends NullPointerException  {
     @FXML
@@ -208,10 +211,5 @@ public  class HelloController extends NullPointerException  {
         stage.close();
 
     }
-
-
-
-
-
 }
 

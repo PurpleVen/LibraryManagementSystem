@@ -290,7 +290,7 @@ public class AddBookController extends NullPointerException{
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Validate no of books");
             alert.setHeaderText(null);
-            alert.setContentText("PLease enter valid input");
+            alert.setContentText("PLease enter no of copies");
             alert.showAndWait();
             return false;
         }
