@@ -40,9 +40,9 @@ public class DuedateDetailsController implements Initializable {
     final ObservableList<DuedateDetailsInfo> listview = FXCollections.observableArrayList();
     @Override
     public void initialize(URL url, ResourceBundle rb){
-        memberid.setCellValueFactory(new PropertyValueFactory<>("MemberID"));
-        membername.setCellValueFactory(new PropertyValueFactory<>("Name"));
-        bookid.setCellValueFactory(new PropertyValueFactory<>("BookID"));
+        memberid.setCellValueFactory(new PropertyValueFactory<>("Name"));
+        membername.setCellValueFactory(new PropertyValueFactory<>("BookID"));
+        bookid.setCellValueFactory(new PropertyValueFactory<>("MemberID"));
         duedate.setCellValueFactory(new PropertyValueFactory<>("ReturnDate"));
         //fine.setCellValueFactory(new PropertyValueFactory<>("g"));
         try{
@@ -54,10 +54,11 @@ public class DuedateDetailsController implements Initializable {
             ResultSet resultSet = s.executeQuery(sql);
 
             while (resultSet.next()){
-                listview.add(new BookDetailsinfo(resultSet.getString("MemberID"),
-                        resultSet.getString("Name"),
+                listview.add(new DuedateDetailsInfo
+                        (resultSet.getString("Name"),
                         resultSet.getString("BookID"),
-                        resultSet.getDate("ReturnDate"));
+                        resultSet.getString("MemberID"),
+                        resultSet.getDate("ReturnDate")));
             }
             table.setItems(listview);
 

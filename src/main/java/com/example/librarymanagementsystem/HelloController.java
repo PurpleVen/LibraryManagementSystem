@@ -127,7 +127,6 @@ public class HelloController extends NullPointerException{
 
 package com.example.librarymanagementsystem;
 
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -209,6 +208,9 @@ public  class HelloController extends NullPointerException  {
         stage.close();
 
     }
+
+
+
 
 
 }

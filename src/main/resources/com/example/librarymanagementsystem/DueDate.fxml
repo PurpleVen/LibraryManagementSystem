@@ -81,7 +81,7 @@
                         <Image url="@../../../Assets/book-stack.png" />
                      </image>
                   </ImageView>
-                  <Button layoutX="13.0" layoutY="426.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Manage" textFill="WHITE">
+                  <Button layoutX="13.0" layoutY="426.0" mnemonicParsing="false" onAction="#GoToManageMember" prefHeight="36.0" prefWidth="246.0" style="-fx-background-color: #242428; -fx-font-weight: bold;" text="Manage" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -97,13 +97,13 @@
                </font>
             </Label>
             <HBox layoutX="294.0" layoutY="134.0" prefHeight="51.0" prefWidth="638.0" style="-fx-background-color: #F8F9FD;" />
-            <ImageView accessibleRole="BUTTON" layoutX="292.0" layoutY="25.0" onDragDetected="#switchToDashboard">
+            <ImageView accessibleRole="BUTTON" layoutX="292.0" layoutY="25.0">
                <image>
                   <Image url="@../../../Assets/icons8-go-back-24.png" />
                </image>
             </ImageView>
-            <Button layoutX="316.0" layoutY="24.0" mnemonicParsing="false" text="Back" />
-            <ImageView fitHeight="160.0" fitWidth="261.0" layoutX="504.0" layoutY="37.0" onMouseClicked="#switchToDueDate">
+            <Button layoutX="316.0" layoutY="24.0" mnemonicParsing="false" onAction="#GoToDashboard" text="Back" />
+            <ImageView fitHeight="160.0" fitWidth="261.0" layoutX="504.0" layoutY="37.0">
                <image>
                   <Image url="@../../../Assets/alert-removebg-preview.png" />
                </image>

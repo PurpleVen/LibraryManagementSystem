@@ -11,6 +11,7 @@ module com.example.librarymanagementsystem {
     requires eu.hansolo.tilesfx;
     requires java.sql;
 
+
     opens com.example.librarymanagementsystem to javafx.fxml;
     exports com.example.librarymanagementsystem;
 

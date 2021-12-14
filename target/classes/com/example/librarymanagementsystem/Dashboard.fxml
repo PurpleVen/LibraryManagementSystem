@@ -124,7 +124,7 @@
             <Font size="16.0" />
          </font>
       </Button>
-      <Button layoutX="754.0" layoutY="399.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="146.0" style="-fx-font: bold; -fx-background-color: #f4d8ff; -fx-background-radius: 1em; -fx-border-color: linear-gradient(to left bottom, #a617ff, #9731fc, #893ff8, #7c49f3, #7051ed, #5a62f3, #4471f6, #2f7df6, #0093fd, #00a8fe, #2cbafd, #5bcbfa); -fx-border-radius: 1em;" text="Due Date List" textFill="#2b2869">
+      <Button layoutX="754.0" layoutY="399.0" mnemonicParsing="false" onAction="#DueDate" prefHeight="35.0" prefWidth="146.0" style="-fx-font: bold; -fx-background-color: #f4d8ff; -fx-background-radius: 1em; -fx-border-color: linear-gradient(to left bottom, #a617ff, #9731fc, #893ff8, #7c49f3, #7051ed, #5a62f3, #4471f6, #2f7df6, #0093fd, #00a8fe, #2cbafd, #5bcbfa); -fx-border-radius: 1em;" text="Due Date List" textFill="#2b2869">
          <font>
             <Font size="16.0" />
          </font>
