@@ -1,4 +1,4 @@
-package com.example.librarymanagementsystem;
+/*package com.example.librarymanagementsystem;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -36,7 +36,7 @@ public class DuedateDetailsController implements Initializable {
     private TableColumn<DuedateDetailsInfo, Date> duedate;
     /*@FXML
     private TableColumn<DuedateDetailsInfo, Double> fine;*/
-
+/*
     final ObservableList<DuedateDetailsInfo> listview = FXCollections.observableArrayList();
     @Override
     public void initialize(URL url, ResourceBundle rb){
@@ -168,3 +168,4 @@ public class DuedateDetailsController implements Initializable {
 
 }
 
+*/

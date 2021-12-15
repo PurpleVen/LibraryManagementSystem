@@ -115,7 +115,10 @@
                </font>
             </Label>
             <TextField fx:id="genre" layoutX="235.0" layoutY="232.0" prefHeight="26.0" prefWidth="334.0" promptText="Book Genre" />
-            <Label fx:id="AddBookLabel" layoutX="225.0" layoutY="369.0" prefHeight="18.0" prefWidth="149.0" />
+            <Label fx:id="AddBookLabel" layoutX="173.0" layoutY="369.0" prefHeight="27.0" prefWidth="263.0" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
          </children>
       </AnchorPane>
       <ImageView fitHeight="110.0" fitWidth="158.0" layoutX="538.0" layoutY="12.0">
