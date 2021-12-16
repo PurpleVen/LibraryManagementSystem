@@ -55,8 +55,8 @@
             <Image url="@../../../Assets/undraw_book_reading_kx9s-removebg-preview.png" />
          </image>
       </ImageView>
-      <Button fx:id="DueDate" layoutX="726.0" layoutY="226.0" mnemonicParsing="false" onAction="#DueDate" prefHeight="286.0" prefWidth="202.0" style="-fx-background-color: #f4d8ff; -fx-background-radius: 1em;" />
-      <ImageView fitHeight="100.0" fitWidth="161.0" layoutX="751.0" layoutY="254.0">
+      <Button fx:id="DueDate" layoutX="726.0" layoutY="232.0" mnemonicParsing="false" onAction="#DueDate" prefHeight="262.0" prefWidth="202.0" style="-fx-background-color: #f4d8ff; -fx-background-radius: 1em;" />
+      <ImageView fitHeight="131.0" fitWidth="221.0" layoutX="721.0" layoutY="242.0">
          <image>
             <Image url="@../../../Assets/alert-removebg-preview.png" />
          </image>
@@ -119,12 +119,7 @@
                   <Font name="System Bold" size="30.0" />
               </font>
           </Label>
-      <Button layoutX="752.0" layoutY="450.0" mnemonicParsing="false" onAction="#IssueBookDetails" prefHeight="35.0" prefWidth="146.0" style="-fx-font: bold; -fx-background-color: #f4d8ff; -fx-background-radius: 1em; -fx-border-color: linear-gradient(to left bottom, #a617ff, #9731fc, #893ff8, #7c49f3, #7051ed, #5a62f3, #4471f6, #2f7df6, #0093fd, #00a8fe, #2cbafd, #5bcbfa); -fx-border-radius: 1em;" text="Issued Book List" textFill="#2b2869">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Button>
-      <Button layoutX="754.0" layoutY="399.0" mnemonicParsing="false" onAction="#DueDate" prefHeight="35.0" prefWidth="146.0" style="-fx-font: bold; -fx-background-color: #f4d8ff; -fx-background-radius: 1em; -fx-border-color: linear-gradient(to left bottom, #a617ff, #9731fc, #893ff8, #7c49f3, #7051ed, #5a62f3, #4471f6, #2f7df6, #0093fd, #00a8fe, #2cbafd, #5bcbfa); -fx-border-radius: 1em;" text="Due Date List" textFill="#2b2869">
+      <Button layoutX="756.0" layoutY="394.0" mnemonicParsing="false" onAction="#IssueBookDetails" prefHeight="51.0" prefWidth="148.0" style="-fx-font: bold; -fx-background-color: #f4d8ff; -fx-background-radius: 1em; -fx-border-color: linear-gradient(to left bottom, #a617ff, #9731fc, #893ff8, #7c49f3, #7051ed, #5a62f3, #4471f6, #2f7df6, #0093fd, #00a8fe, #2cbafd, #5bcbfa); -fx-border-radius: 1em;" text="Issued Book List" textFill="#2b2869">
          <font>
             <Font size="16.0" />
          </font>
