@@ -25,7 +25,7 @@ We have mainly build this project because the use of library system eases all th
 | Issue books to the members| 
 | New books can be added to the system| 
 | Information of the existing books can be edited|
-| Members can be managed by the admins|
+| Information of the members can be managed by the admins|
 #
 
 
