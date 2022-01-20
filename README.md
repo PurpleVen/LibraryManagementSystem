@@ -3,7 +3,7 @@ Java Mini Project
 
 ![Lib Management](https://user-images.githubusercontent.com/86104620/144172160-1a14acb8-2c0e-4120-b4f1-e58b982c1792.png)
 #
-Team Members : 
+Team Members: 
 
 ![crop team libman](https://user-images.githubusercontent.com/86104620/147076540-864bdb45-0aca-4afa-b058-124faa3fdae7.jpeg)
  
